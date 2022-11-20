@@ -1,0 +1,12 @@
+
+
+SUMMARY:
+2.1.2 User Interfaces
+As describes in the section 3 of this document
+No external hardware interface is required 
+2.1.3 Hardware Interfaces
+Not applicable at this stage
+2.1.4 Software Interfaces
+Specify the use of other required software products (e.g., a DBMS or operating system), and interfaces with 
+other application systems. Verification of the application for entry in the PGS Local Group
+3.

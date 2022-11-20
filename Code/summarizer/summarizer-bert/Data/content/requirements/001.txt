@@ -1,0 +1,28 @@
+2.1.2 User Interfaces
+As describes in the section 3 of this document
+No external hardware interface is required 
+2.1.3 Hardware Interfaces
+Not applicable at this stage
+2.1.4 Software Interfaces
+Specify the use of other required software products (e.g., a DBMS or operating system), and interfaces with 
+other application systems. For each required software product, provide the following:
+ HTML/Java script
+ Microsoft dot net frame work(As per information till date)
+ Ms SQL server 2008
+ Under windows server 2008
+2.2 Bussiness Requirment PGS
+1. Application for entry into PGS Local Group 
+ 
+a. To make the Farm history sheet
+b. To sign the Organic Farmers pledge
+2. Verification of the application for entry in the PGS Local Group
+3. To record the attendance for weekly meeting
+4. To record the key field day training
+5. To enter information for Peer inspection.
+a. For a season
+b. For Processing and handling
+6. Registration of Local Group with Regional Council
+7. Verification of the Local Group
+8. Local Group summary work sheet for certification
+9. Agreement between PGS-India Regional Council and Local Group
+
