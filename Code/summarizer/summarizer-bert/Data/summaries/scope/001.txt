@@ -1,5 +1,0 @@
-
-
-SUMMARY:
-To build a system through which the user can apply for the registration of local group, the user is 
-able to apply for member ship of the local group.

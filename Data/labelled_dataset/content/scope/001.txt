@@ -1,7 +1,0 @@
-To build a system through which the user can apply for the registration of local group, the user is 
-able to apply for member ship of the local group.
-The User shall be able to apply to for certification.
-The Regional Council user shall be to enter the details of key field training; the Regional Council 
-user shall be to enter details of weekly attendance, Verify the Local group and local group member 
-ship. Enter the peer inspection/appraisal, peer review for season.
-To issue certificate
