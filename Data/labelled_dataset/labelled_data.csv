@@ -1,5 +1,5 @@
-doc,goal,description,scope,requirements,architecture,users,summary
-SRS1,goal,description,scope,requirements,architecture,users,summary
+doc,purpose,description,scope,requirements,assumptions and dependencies,architecture,users
+SRS1,purpose,description,scope,requirements,assumptions and dependencies,architecture,users
 SRS2,,,,,,,
 SRS3,,,,,,,
 SRS4,,,,,,,

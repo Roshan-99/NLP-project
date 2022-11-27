@@ -1,22 +1,22 @@
 doc,category,summary
-1,goal,goal
+1,purpose,purpose
 1,description,description
 1,scope,scope
 1,requirements,requirements
+1,assumptions and descriptions,assumptions and descriptions
 1,architecture,architecture
 1,users,users
-1,summary,summary
-2,goal,goal
+2,purpose,purpose
 2,description,description
 2,scope,scope
 2,requirements,requirements
+2,assumptions and descriptions,assumptions and descriptions
 2,architecture,architecture
 2,users,users
-2,summary,summary
-3,goal,goal
+3,purpose,purpose
 3,description,description
 3,scope,scope
 3,requirements,requirements
+3,assumptions and descriptions,assumptions and descriptions
 3,architecture,architecture
 3,users,users
-3,summary,summary
