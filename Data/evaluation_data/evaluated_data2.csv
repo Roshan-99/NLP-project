@@ -1,0 +1,1481 @@
+,doc,predicted,expected,rouge_precision,rouge_recall,rouge_fmeasure,bert_precision,bert_recall,bert_fmeasure
+0,1.0,"This section will cover general information about the project perspective, functions, and various requirements and constraints. More detailed descriptions of the project requirements and functions will be covered in latter sections. 2.1 Product Perspective This project is designed to be used by employees of several automotive plants to Prototype V1 will have little functionality, and its main purpose will be to display the user interface as well as to show our interpretation of the requirements. 5.2 Sample Scenarios An employee, Bob, was given the unique four-digit-code 7924 by their The system is a desktop application that requires a computer running Windows Vista SP2 or higher version of Windows operating system. The computer must have Visual C++ Redistributable 2010, as well as .NET Framework 4.0 installed. Prototype V1 will have little functionality, and its main purpose will be to display Vista SP2 or higher version of Windows operating system. The computer must have Visual C++ Redistributable 2010, as well as .NET Framework 4.0 installed. Prototype V1 will have little functionality, and its main purpose will be to display the user interface as well as to show our interpretation of the requirements. 5.2 Sample Scenarios Specification document will further explain the specifics of the software system being produced. Section 2 focuses on the context for needing the proposed system, how it should function, and the related constraints. Section 3 provides a detailed listing of the requirements specific to the system following a hierarchical numbering scheme. Section 4 addresses the modeling requirements which includes use cases diagrams, a state diagram, and a high-level class diagram. Section 5 discusses the proposed prototype and the details of the system with instructions on how to run it as well as sample scenarios. Section 6 contains a list of references used throughout the document. Finally, Section 7 provides contact information used for further inquiries. 2 Overall Description This section will cover general information about the project perspective, functions, and various requirements and constraints. More detailed descriptions of the project requirements and functions will be covered in latter sections. 2.1 Product Perspective","Project Automate Paint Defect Analysis
+Solution to the clientÕs need to automate the recording of paint defects on vehicles during production.",0.025495750708215296,0.4090909090909091,0.047999999999999994,0.761536717414856,0.8247339725494385,0.791876494884491
+1,1.0,"a. This describes the attributes, operations, relationships, and UML extensions for each of the classes in the class diagram. Element Name Description Description Element Name Description Description Defects Provides interface for viewing a given vehicle and the defects associated with it. Supports 3D model of the vehicle with color-coordinated defect visualization. Use Case: Remove Defect Record Actors: Analyst Description: Analyst can remove a defect record if there is an error. Description Description Defects Provides interface for viewing a given vehicle and the defects associated with it. Supports 3D model of the vehicle with color-coordinated defect visualization. Attributes Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by James Daly, Michigan State University (dalyjame at cse.msu.edu) components:System.Com ponentModel.IContainer Required designer variable Description: Analyst can remove a defect record if there is an error. - Analyst selects type of report to generate Use Case: Generate Report","To put the proposed system in perspective, the result of the project will be a system with a web interface that allows the client analysts to input defect data about certain models of cars in a standardized fashion. The system will automate the recording of paint defects on vehicles during production and then allow users to run reports on the data. 
+The system will eliminate the need for paper diagrams and will allow automatically generate the desired reports from the entered data. Additional benefits include a decrease resources (i.e. ink, paper, etc.) and human error that comes from physically transcribing the vehicle paint defects. Users of the system will be able to track defects over time.",0.24528301886792453,0.3333333333333333,0.2826086956521739,0.7918347716331482,0.8285866379737854,0.8097939491271973
+2,1.0,"The system will have two separate sets of hardware constraints, one for the end user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for. 2.5 Assumptions and Dependencies It is assumed that the end user program will be run on a Windows Vista or newer user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for. 2.5 Assumptions and Dependencies It is assumed that the end user program will be run on a Windows Vista or newer Windows system. It is also assumed that the technician using the end user program will have been trained to recognize all the types of paint defects, as it is not the softwareÛªs purpose to explain how to qualify defects, instead it only stores data on the defects. 2.6 Proportioning of Requirements technicians that are running paint inspections in the car factories. These technicians will be trained to identify types of paint defects, and to run a complete inspection of the entire paint job on a car. After identifying a paint defect of a particular type, these technicians will then enter the defect into the software to store its information in the database. The second type of user will be an administrative user that will utilize the reports the system produces. 2.4 Constraints The system will have two separate sets of hardware constraints, one for the end user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for. 2.5 Assumptions and Dependencies 2.3. Analyst marks area of defect on the vehicle wireframes shown 2.3.1. Analyst will drag an ellipsoid over the area of defect and shape the ellipsoid to accurately represent the defect 2.3.2. Color of mark will depend on the type of defect selected in step 2.2 2.3.1. Analyst will drag an ellipsoid over the area of defect and shape the ellipsoid to accurately represent the defect 2.3.2. Color of mark will depend on the type of defect selected in step 2.2 2.4. Analyst enters any notes about defect","Scope : The application domain of the system will be part of the clientÕs companyÕs existing computer infrastructure. The application can be run on a standard desktop or laptop computer with internet connection which are located at each inspection checkpoint in order to produce reports identical to those currently generated. The application will support all vehicles in production at any of the three plants, such as the Lansing Delta Township, Lansing Grand River, and Lake Orion Assembly, where the application will be utilized.
+Constraints :The system will have two separate sets of hardware constraints, one for the end user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for.",0.2413793103448276,0.7455621301775148,0.3646888567293777,0.8569139838218689,0.8712109923362732,0.8640033602714539
+3,1.0,"Authors: Lisa Doan, Alex Besinger, Patrick McCormick, Samantha Oldenburg, Clayton Peters Customer: General Motors Instructor: James Daly 1 Introduction 1. Analyst loads application and enters identification information 1.1. Analyst enters their first and last name 1.2. Analyst enters the start and end time of their working period, along with which shift they are working 1.3. Analyst selects which checkpoint vehicles are inspected Dividing these features into two executables would simplify work for both types of employees, while hiding unnecessary function. 3 Specific Requirements 1. Analyst loads application and enters identification information 1.1. Analyst enters their first and last name 1.2. Analyst enters the start and end time of their working period, along with which shift they are working Actors: Analyst Description: Analyst enters identifying information, selects their work period, and selects the checkpoint where vehicles are to be inspected. - Analyst inspects a vehicle (repeat until end of shift as vehicles are inspected) 1.2. Analyst enters the start and end time of their working period, along with which shift they are working 1.3. Analyst selects which checkpoint vehicles are inspected 1.4. Analyst saves information entered and information is stored in a database","Software Requirements : 
+1. Analyst loads application and enters identification information
+1.1. Analyst enters their first and last name
+1.2. Analyst enters the start and end time of their working period, along with
+which shift they are working
+1.3. Analyst selects which checkpoint vehicles are inspected
+1.4. Analyst saves information entered and information is stored in a database
+2. Analyst inspects a vehicle (repeat until end of shift as vehicles are inspected)
+2.1. Analyst selects model of car inspected
+2.1.1. Wireframes of selected model shown
+2.2. Analyst selects type of defect
+2.3. Analyst marks area of defect on the vehicle wireframes shown
+2.3.1. Analyst will drag an ellipsoid over the area of defect and shape the
+ellipsoid to accurately represent the defect
+2.3.2. Color of mark will depend on the type of defect selected in step 2.2
+2.4. Analyst enters any notes about defect
+2.5. Analyst saves information entered and information is stored in a database
+2.6. If necessary, the analyst is able to remove a vehicle inspection information
+if they made a mistake entering information
+
+3. Analyst selects type of report to generate
+3.1. Analyst selects vehicle inspections to include in report
+3.1.1. Able to select or deselect vehicles to include based on GM facility,
+checkpoint at which the vehicle was inspected, time and date of
+inspection, or type of defect
+3.1.1.1. Data from at least ten vehicle inspections must be included
+
+to generate a report
+
+3.2. Data regarding selected vehicle inspections are retrieved from database
+and collated
+3.3. Selected report is generated
+
+System Requirements : 
+The system is a desktop application that requires a computer running Windows Vista SP2 or higher version of Windows operating system. The computer must have Visual C++ Redistributable 2010, as well as .NET Framework 4.0 installed.Prototype V1 will have little functionality, and its main purpose will be to display the user interface as well as to show our interpretation of the requirements.",0.628140703517588,0.3633720930232558,0.4604051565377532,0.8607708215713501,0.8286594152450562,0.8444099426269531
+4,1.0,"This section will cover general information about the project perspective, functions, and various requirements and constraints. More detailed descriptions of the project requirements and functions will be covered in latter sections. 2.1 Product Perspective This project is designed to be used by employees of several automotive plants to Specification document will further explain the specifics of the software system being produced. Section 2 focuses on the context for needing the proposed system, how it should function, and the related constraints. Section 3 provides a detailed listing of the requirements specific to the system following a hierarchical numbering scheme. Section 4 addresses the modeling requirements which includes use cases diagrams, a state diagram, and a high-level class diagram. Section 5 discusses the proposed prototype and the details of the system with instructions on how to run it as well as sample scenarios. Section 6 contains a list of references used throughout the document. Finally, Section 7 provides contact information used for further inquiries. 2 Overall Description This section will cover general information about the project perspective, functions, and various requirements and constraints. More detailed descriptions of the project requirements and functions will be covered in latter sections. 2.1 Product Perspective This Software Requirements Specification document outlines Group 8Ûªs solution to the clientÛªs need to automate the recording of paint defects on vehicles during production. The topics covered in this document include: an introduction to the clientÛªs problem, the teamÛªs proposed solution to address the problem such as how the product system should function, specific system and client requirements, and diagrams illustrating use cases and scenarios when the system would be used. Additionally, a prototype of the proposed system with instructions on how to run it and sample scenarios is also provided in the latter portion of the document. At the end of the document, external sources that were referenced appear in a list. 1.1 Purpose The Software Requirements Specification (SRS) document serves to outline the document, the list below clearly specifies the meanings of these terms. - SRS (Software Requirements Specification) ÛÜ : A document of the software system to be developed that discusses the functional and nonfunctional requirements. It also includes use cases that describe how users (client analysts) would interact with the software. - Defect ÛÜ : An impurity, scratch, or other imperfection in the paint on a car. Analysts are trained to recognize all the different types of defects. Instructor: James Daly 1 Introduction This Software Requirements Specification document outlines Group 8Ûªs solution to the clientÛªs need to automate the recording of paint defects on vehicles during production. The topics covered in this document include: an introduction to the clientÛªs problem, the teamÛªs proposed solution to address the problem such as how the product system should function, specific system and client requirements, and diagrams illustrating use cases and scenarios when the system would be used. Additionally, a prototype of the proposed system with instructions on how to run it and sample scenarios is also provided in the latter portion of the document. At the end of the document, external sources that were referenced appear in a list. 1.1 Purpose","Assumptions : It is assumed that the end user program will be run on a Windows Vista or newer Windows system. It is also assumed that the technician using the end user program will have been trained to recognize all the types of paint defects, as it is not the softwareÕs purpose to explain how to qualify defects, instead it only stores data on the defects.",0.08901515151515152,0.7121212121212122,0.15824915824915828,0.7759836912155151,0.8373888731002808,0.8055177330970764
+5,1.0,"To clarify the unique terminology, acronyms, and abbreviations used in the document, the list below clearly specifies the meanings of these terms. - SRS (Software Requirements Specification) ÛÜ : A document of the software system to be developed that discusses the functional and nonfunctional requirements. It also includes use cases that describe how users (client analysts) would interact with the software. document, the list below clearly specifies the meanings of these terms. - SRS (Software Requirements Specification) ÛÜ : A document of the software system to be developed that discusses the functional and nonfunctional requirements. It also includes use cases that describe how users (client analysts) would interact with the software. - Defect ÛÜ : An impurity, scratch, or other imperfection in the paint on a car. Analysts are trained to recognize all the different types of defects. This Software Requirements Specification document outlines Group 8Ûªs solution to the clientÛªs need to automate the recording of paint defects on vehicles during production. The topics covered in this document include: an introduction to the clientÛªs problem, the teamÛªs proposed solution to address the problem such as how the product system should function, specific system and client requirements, and diagrams illustrating use cases and scenarios when the system would be used. Additionally, a prototype of the proposed system with instructions on how to run it and sample scenarios is also provided in the latter portion of the document. At the end of the document, external sources that were referenced appear in a list. 1.1 Purpose The Software Requirements Specification (SRS) document serves to outline the technicians that are running paint inspections in the car factories. These technicians will be trained to identify types of paint defects, and to run a complete inspection of the entire paint job on a car. After identifying a paint defect of a particular type, these technicians will then enter the defect into the software to store its information in the database. The second type of user will be an administrative user that will utilize the reports the system produces. 2.4 Constraints The system will have two separate sets of hardware constraints, one for the end user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for. 2.5 Assumptions and Dependencies The system will have two separate sets of hardware constraints, one for the end user program, and one for the server architecture. The end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. Both setups require an internet connection, and the server architecture requires enough memory to store the database of past defects. The exact amount of storage required will depend on how long the customer wishes to store past information for. 2.5 Assumptions and Dependencies It is assumed that the end user program will be run on a Windows Vista or newer","The end user system will initially need to present a user interface where they can select the factory they are working at, the checkpoint they are inspecting at, and the type of car being inspected. This information is stored on the server alongside the defect data that the user inputs later.
+Second, another menu will allow users to indicate the location, severity, and type of defects. This menu will display a wireframe for the selected model of car, that allows users to place the defect in the appropriate location on the vehicle.
+Lastly, end users will be able to run three types of reports over previously stored defect data. The first type of report is a QA report, which summarizes vehicle inspections over a specific time range, which is chosen by the user when running the report. It contains all the data stored for the defects over that period, the total number of cars inspected, and the defects per unit. It also contains several tables that show an aggregated car diagram with locations of all recorded defects, and a pie chart that displays the ratios of all defect types over this period. 
+The second report is a Summary of Analysis report, which is a numeric summary of defects over a given period that were entered by a specific analyst. The user running the report is able to specify the date range to run the report on. This report contains the shift the analyst was on, the check point being inspected, and a summary of the number of defects, number of units, and number of defects per unit.
+The final report type is a weekly chart, which outputs an Excel file containing weekly data over several months. The number of months to run the report on is selected by the user. This report contains weekly statistics for each facility, part name, machine, and data for all defects during that period.",0.31156716417910446,0.5235109717868338,0.3906432748538012,0.8014956116676331,0.8337620496749878,0.8173105120658875
+6,1.0,"A user directory system is a feature that could be included in a future release. A user directory could store what factory a user works in, what shifts they work, and further information for users. Currently, any user can access any factory, and input defects for any shift, checkpoint, and model. A user directory system could be used to verify that a user is entering data for an appropriate shift, and reduce the possibility of mistakes when entering data. Another possible feature that could be added in the future is the release of another Windows system. It is also assumed that the technician using the end user program will have been trained to recognize all the types of paint defects, as it is not the softwareÛªs purpose to explain how to qualify defects, instead it only stores data on the defects. 2.6 Proportioning of Requirements A user directory system is a feature that could be included in a future release. A user directory could store what factory a user works in, what shifts they work, and further information for users. Currently, any user can access any factory, and input defects for any shift, checkpoint, and model. A user directory system could be used to verify that a user is entering data for an appropriate shift, and reduce the possibility of mistakes when entering data. The end user system will initially need to present a user interface where they can select the factory they are working at, the checkpoint they are inspecting at, and the type of car being inspected. This information is stored on the server alongside the defect data that the user inputs later. Second, another menu will allow users to indicate the location, severity, and type Fig 1. ÛÜ Pictorial representation of the bigger system 2.2 Product Functions The end user system will initially need to present a user interface where they can select the factory they are working at, the checkpoint they are inspecting at, and the type of car being inspected. This information is stored on the server alongside the defect data that the user inputs later. record and track defects in the paint of cars on an assembly line. There are several constraints the system will need to operate under. First, the end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. The end user system will need to present a user interface that allows a user to indicate the location, severity, and type of defects. In addition, users will be able to query server data by running reports. The frontend and backend will communicate using HTTP requests to both send and receive data from the database. Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by James Daly, Michigan State University (dalyjame at cse.msu.edu) Fig 1. ÛÜ Pictorial representation of the bigger system 2.2 Product Functions The end user system will initially need to present a user interface where they can","This project is designed to be used by employees of several automotive plants to record and track defects in the paint of cars on an assembly line. There are several constraints the system will need to operate under. First, the end user system will need to run on a Windows computer, while the backend will need to run on appropriate server hardware. The end user system will need to present a user interface that allows a user to indicate the location, severity, and type of defects. In addition, users will be able to query server data by running reports. The frontend and backend will communicate using HTTP requests to both send and receive data from the database.",0.21875,0.9572649572649573,0.356120826709062,0.8357735872268677,0.9149583578109741,0.8735752105712891
+7,11.0,"Software Requirements Specification for DineOut Page 1 1. Introduction 1.1 Purpose DineOut is an android application that aims to digitalize the process of various restaurant management operations including ordering and inventory management and POS. This document aims to capture the system requirements and features particularly related to ordering and inventory management to be implemented in DineOut version 1.0., with the later releases on POS (Point of Sale). 1.2 Document Conventions 1.2.1 Priority Conventions In this complete document, we will mention priority as ÛÏlowÛ or ÛÏhighÛ throughout the document. Secondly, priorities are only mentioned in section 4 and section 5 along with detailed description of the requirements. Any high-level requirements mentioned elsewhere are assumed to inherit priorities of their detailed counterparts in section 4,5. 1.2.2 Fonts Conventions Throughout this document, All the user entities are written in capitalizations i.e. first letter as capital. Also, any significant term which has been described in the glossary is made bold and italic in the text. On the other hand, those terms which are significant (but not described in glossary) are bold in text. 1.3 Intended Audience and Reading Suggestions The purpose of this document is to give a detailed description of the requirements for the ÛÏDineOutÛ software. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system requirements as well as non-functional requirements. This document is primarily intended to be proposed to a customer for its approval and also for further processing such as additions to be developed in later releases. Customers can refer to section 3 and 4 for the list of requirements implemented in Version 1.0. Users are advised to refer to user documentation section for tutorials and online support information. This document will also be used as a reference for developing and testing Version 1.0 by the development team as well as the testers. The development team can refer to section 2.3 and 2.6 for system level information and section 3 for system features that are to be implemented in this version of the software. Software Requirements Specification for DineOut Page 2 1.4 Product Scope DineOut is a restaurant management system developed with the intention of automating the day to day tasks in a restaurant like order and inventory management, bill generation and taking feedback. This release of the software would deal with these tasks only whereas more areas might be automated in the future versions of this software. The main purpose is to improve the performance of the restaurant by eradicating the daily paperwork. With this system the tasks would be performed in less amount of time and more efficiently. An additional benefit of this software is that during the rush hours the load can be balanced effectively, and restaurants would perform better than usual. In addition to this, human error that occurs when performing tasks manually is also minimized and presence of queues in the system to assign tasks to chefs can reduce congestion in the kitchen. The system would also result in reduction of labor which would result in the reduction of expenses of the restaurant. Feedback module would help the restaurant check for how well they are performing, and monthly/yearly figures can be checked by the billing module to see the trends in sales and profits. These benefits can potentially result in generation of more revenues for the restaurant. 1.5 References 1. Android User Interface Guidelines, Available at: https://developer.android.com/guide/practices/ui_guidelines/ 2. IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998. Software Requirements Specification for DineOut Page 3 2. Overall Description This section will give an overview of the DineOut application. The basic functionality of the system as well its context will be explored in detail. It also describes different kinds of stakeholders and user classes associated with the system and what functionality is available for each class. At last, the assumptions and dependencies for the system are presented. 2.1 Product Perspective DineOut app will attempt to replace the traditional manual ordering process and is a new self- contained software system that consists of two parts: one mobile application and the other is Firebase database. The mobile application will be used for ordering and interacting with the inventory while the Firebase database will be used for storing the inventory and ordering related information about the food items like pending and complete order queues. The mobile application will have five interfaces. Each for Customer, Manager, Head Chef, Admin and Chef. Manager can see/edit the status of available/reserved tables. CustomerÛªs interface will consist of a scrollable menu listing available items and their price. When the customer selects some dishes and place the order, it will be stored in ÛÏpending ordersÛ table in Firebase database. Head ChefÛªs interface will be such that he is notified of the pending order and he is able to assign it to one the available queues of chefs who are then able to see the new order in their screens or on a central display in kitchen. After each item/dish in an order is prepared, the order is marked completed through the Head ChefÛªs interface, the hall manager gets notified through his interface. CustomerÛªs interface has an option for requesting the bill. Bill is printed through the ManagerÛªs interface. Admin can change and modify the Firebase database like add new menus or staff, edit current inventory stock etc. Fig1 - System Perspective Diagram Software Requirements Specification for DineOut Page 4 2.2 Product Functions Given below are the major functions that can be performed using DineOut app. Moreover, a Data Flow Diagram (DFD) for better understanding of the system is also given in Appendix B. The system will: Û¢ Allow Customers to scroll through the menu and select the dishes he/she wants. Û¢ Allow the Customers to cancel/edit the order any time before its prepared. Û¢ Allow Customers to provide feedback regarding the food and overall service of the restaurant. Û¢ Allow Customers to request for bill. Û¢ Allow Customers to ask for help through the system. Û¢ Assign Head Chef to assign the dishes in an order to chefs according to their specialties. Û¢ Show dish queues and their status, for Chefs. Û¢ Allow admin to perform CRUD (create, retrieve, update and delete) operations on Staff Members, Menu Items and Inventory. Û¢ Allow Head Chef to mark orders complete. Û¢ Allow the Head Chef to approve cancellation of dish or order. Û¢ Allow Hall Manager to mark the bill as paid. Û¢ Notify the Hall Manager when a particular order is complete. Û¢ Allow the Hall Manager to see/edit status of tables reserved and available and their capacities. 2.3 User Classes and Characteristics There are four types of users that interact with our system (See appendix B). Firstly, there is a Hall Manager, then Customer, Head Chef and Admin. WeÛªll provide an interface for Chefs as well through which they are looking at the status of their order queues, but they will not interact with our system. System shall use v4 support library Print Helper for connecting to the printer and a driver to connect to the kitchen screen. 3.4 Communications Interfaces DineOut is an android application and it will communicate with Firebase (which is a storage server provided by Google for android developers). Firebase uses HTTP protocol for communication, so our device will follow HTTP protocol when connecting to Firebase. Software Requirements Specification for DineOut Page 9 4. System Requirements 4.1 Place Order 4.1.1 Description and Priority 2.3.5 Hall Manager Hall Managers will provide its input when he marks the bill as paid when customers pay for their order or get the bill printed. Moreover, he gets a notification whenever a particular order is complete, or some customer asks for help through the system. Hall manager can also see tables in the hall and their status i.e. empty or filled. 2.4 Operating Environment It is an android application running on a tablet and the tablets are present in a restaurant. Firstly, manager would be present at the entrance and system in his tab would show the tables that are empty/reserved. There would be a tab present at every table for customers which they will use to give order. When an order is placed the server would notify the head chef/ kitchen manager who would be in the kitchen. Head chef would use his tab which also would have the system installed and would add the order to the appropriate queues of the chefs. The chefs would be present in the kitchen area and their interface would allow them to check for the dishes they have to prepare. So, the system is running on various tablets but the operating environment and purpose of each is different for each user. 2.5 Design and Implementation Constraints 2.5.1 Operating System Constraint System should be compatible and will smoothly run on Android version 6.0 or above. 2.3.4 Admin AdminÛªs job is to manage the inventory and other information related to menu and chefs in the system. 2.3.5 Hall Manager Hall Managers will provide its input when he marks the bill as paid when customers pay for their order or get the bill printed. Moreover, he gets a notification whenever a particular order is complete, or some customer asks for help through the system. Hall manager can also see tables in the hall and their status i.e. empty or filled. 2.4 Operating Environment It is an android application running on a tablet and the tablets are present in a restaurant. Firstly, manager would be present at the entrance and system in his tab would show the tables that are empty/reserved. There would be a tab present at every table for customers which they will use to give order. When an order is placed the server would notify the head chef/ kitchen manager who would be in the kitchen. Head chef would use his tab which also would have the system installed and would add the order to the appropriate queues of the chefs. The chefs would be present in the kitchen area and their interface would allow them to check for the dishes they have to prepare. So, the system is running on various tablets but the operating environment and purpose of each is different for each user. 2.5 Design and Implementation Constraints 2.5.1 Operating System Constraint 2.3.3 Chef Software Requirements Specification for DineOut Page 5 Chefs donÛªt interact with the system. They just have to look at the dishes present in their queues and prepare the dishes accordingly. ChefÛªs name, address and specialty etc. are stored in the database. 2.3.4 Admin AdminÛªs job is to manage the inventory and other information related to menu and chefs in the system. 2.3.5 Hall Manager Hall Managers will provide its input when he marks the bill as paid when customers pay for their order or get the bill printed. Moreover, he gets a notification whenever a particular order is complete, or some customer asks for help through the system. Hall manager can also see tables in the hall and their status i.e. empty or filled. 2.4 Operating Environment It is an android application running on a tablet and the tablets are present in a restaurant. Firstly, manager would be present at the entrance and system in his tab would show the tables that are empty/reserved. There would be a tab present at every table for customers which they will use to give order. When an order is placed the server would notify the head chef/ kitchen manager who would be in the kitchen. Head chef would use his tab which also would have the system installed and would add the order to the appropriate queues of the chefs. The chefs would be present in the kitchen area and their interface would allow them to check for the dishes they have to prepare. So, the system is running on various tablets but the operating environment and purpose of each is different for each user. 2.5 Design and Implementation Constraints",,0.0,0.0,0.0,0.0,0.0,0.0
+8,11.0,"4.8.3 Functional Requirements REQ-1: System must show the feedback screen to the user. REQ-2: System must display multiple choice questions for feedback. 4.9 Add/Edit/Delete Staff Members 4.9.1 Description and Priority 4.9.3 Functional Requirements REQ-1: Admin should be able to add all necessary information about the staff member REQ-2: System must give admin the ability to edit information about all staff members REQ-3: System must give admin the ability to remove staff members. 4.10 Add/Edit/Delete Menu Items 4.10.1 Description and Priority 4.9.1 Description and Priority The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.9.2 Stimulus/Response sequences 4.10.1 Description and Priority The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.10.2 Stimulus/response sequences 4.8.1 Description and Priority The system will give customers the ability to give a feedback for the food or overall services. In the feedback screen there are multiple choice questions each having two options ÛÏSatisfactoryÛ and ÛÏUnsatisfactoryÛ. At the end there is a submit button. priority: high Software Requirements Specification for DineOut Page 16 4.8.2 Stimulus/Response sequences",,0.0,0.0,0.0,0.0,0.0,0.0
+9,11.0,"System should be compatible and will smoothly run on Android version 6.0 or above. 2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface The customer interface will contain three screens. All three screen will have a consistent layout. 1.1. Place Order In this screen, system shows a list of cards (UI Elements) of dishes. Each dish will have an image, its price per serving. 3. Hall Manager Interface Hall manager will have a screen where he will get notification whenever an order is completed. System will notify the hall manager about the order number and table number. Hall Manager also has a screen where all orders are listed, and status button to mark the order as paid. Moreover, he also has an interface screen to see and the status of tables in the restaurant as free/available. 4. Admin Interface Software Requirements Specification for DineOut Page 8 As Admin is authorized to perform CRUD operations on Staff Members, Menu Items and Inventory Items. HeÛªll be having three different screens for Staff Members, Menu Items, and Inventory. 3.2 Hardware Interfaces Our system can interact with a hardware device directly. We have to connect our system to the bill printer for handing the hard copy of the bill to the customer. For billing module, we may have to use a credit card reader for payment, but the interaction and the results generated by that reader are just entered into our system manually by the user. Moreover, the central screen in kitchen which will be displaying the status of order queues. 3.3 Software Interfaces Ñ For Database services system shall use to Firebase latest version released on October 16, 2018. Ñ System will run on android version above or equal to marshmallow 6.0 Ñ Hall manager will have a screen where he will get notification whenever an order is completed. System will notify the hall manager about the order number and table number. Hall Manager also has a screen where all orders are listed, and status button to mark the order as paid. Moreover, he also has an interface screen to see and the status of tables in the restaurant as free/available. 4. Admin Interface Software Requirements Specification for DineOut Page 8 As Admin is authorized to perform CRUD operations on Staff Members, Menu Items and Inventory Items. HeÛªll be having three different screens for Staff Members, Menu Items, and Inventory. 3.2 Hardware Interfaces Our system can interact with a hardware device directly. We have to connect our system to the bill printer for handing the hard copy of the bill to the customer. For billing module, we may have to use a credit card reader for payment, but the interaction and the results generated by that reader are just entered into our system manually by the user. Moreover, the central screen in kitchen which will be displaying the status of order queues. 3.3 Software Interfaces Ñ For Database services system shall use to Firebase latest version released on October 16, 2018. Ñ System will run on android version above or equal to marshmallow 6.0 Ñ System shall use v4 support library Print Helper for connecting to the printer and",,0.0,0.0,0.0,0.0,0.0,0.0
+10,11.0,"The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.9.2 Stimulus/Response sequences Admin/Manage screen shows a grid of staff members. There is a button at the top of grid which says Add Member. In the grid after every entry there is a ÛÏEditÛ and ÛÏRemoveÛ button. REQ-1: Admin should be able to add all necessary information about the staff member REQ-2: System must give admin the ability to edit information about all staff members REQ-3: System must give admin the ability to remove staff members. 4.10 Add/Edit/Delete Menu Items 4.10.1 Description and Priority The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.9.2 Stimulus/Response sequences Admin/Manage screen shows a grid of staff members. There is a button at the top of grid which says Add Member. In the grid after every entry there is a ÛÏEditÛ and ÛÏRemoveÛ button. 1. Stimulus: 4.9.1 Description and Priority The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.9.2 Stimulus/Response sequences 4.10.1 Description and Priority The system gives ability to the admin to add, edit and delete staff members. Using this feature an admin can add chefs, waiters, managers. priority: high 4.10.2 Stimulus/response sequences",,0.0,0.0,0.0,0.0,0.0,0.0
+11,11.0,"5.4.9 Reusability: Current version can be used in the future versions with more functionality added. 5.4.10 Robustness: Software must have checks to ensure that the items that are not available in the menu Software must have checks to ensure that the items that are not available in the menu cannot be selected and the emails, phone numbers added are all valid. 5.4.11 Testability: All the requirements are fulfilled, response time is low, and all functions are working All the requirements are fulfilled, response time is low, and all functions are working perfectly. 4.6.3 Functional Requirements REQ-1: System must send a notification to the hall manager once all the dishes of a particular order has been marked ÛÏcookedÛ. REQ-2: System must replace the timer screen with a new screen having feedback and request bill options. Software Requirements Specification for DineOut Page 15 4.7 Request Bill 4.7.1 Description and Priority 4.8.3 Functional Requirements REQ-1: System must show the feedback screen to the user. REQ-2: System must display multiple choice questions for feedback. 4.9 Add/Edit/Delete Staff Members 4.9.1 Description and Priority 1. Stimulus: Customer taps the ÛÏConfirm OrderÛ button in ÛÏPlace Order screenÛ. Response: Displays the dishes on kitchen screen in corresponding chefÛªs queue. Software Requirements Specification for DineOut Page 12 4.3.3 Functional Requirements Software Requirements Specification for DineOut Page 1 1. Introduction 1.1 Purpose DineOut is an android application that aims to digitalize the process of various restaurant management operations including ordering and inventory management and POS. This document aims to capture the system requirements and features particularly related to ordering and inventory management to be implemented in DineOut version 1.0., with the later releases on POS (Point of Sale). 1.2 Document Conventions 1.2.1 Priority Conventions In this complete document, we will mention priority as ÛÏlowÛ or ÛÏhighÛ throughout the document. Secondly, priorities are only mentioned in section 4 and section 5 along with detailed description of the requirements. Any high-level requirements mentioned elsewhere are assumed to inherit priorities of their detailed counterparts in section 4,5. 1.2.2 Fonts Conventions Throughout this document, All the user entities are written in capitalizations i.e. first letter as capital. Also, any significant term which has been described in the glossary is made bold and italic in the text. On the other hand, those terms which are significant (but not described in glossary) are bold in text. 1.3 Intended Audience and Reading Suggestions The purpose of this document is to give a detailed description of the requirements for the ÛÏDineOutÛ software. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system requirements as well as non-functional requirements. This document is primarily intended to be proposed to a customer for its approval and also for further processing such as additions to be developed in later releases. Customers can refer to section 3 and 4 for the list of requirements implemented in Version 1.0. Users are advised to refer to user documentation section for tutorials and online support information. This document will also be used as a reference for developing and testing Version 1.0 by the development team as well as the testers. The development team can refer to section 2.3 and 2.6 for system level information and section 3 for system features that are to be implemented in this version of the software. Software Requirements Specification for DineOut Page 2 1.4 Product Scope DineOut is a restaurant management system developed with the intention of automating the day to day tasks in a restaurant like order and inventory management, bill generation and taking feedback. This release of the software would deal with these tasks only whereas more areas might be automated in the future versions of this software. The main purpose is to improve the performance of the restaurant by eradicating the daily paperwork. With this system the tasks would be performed in less amount of time and more efficiently. An additional benefit of this software is that during the rush hours the load can be balanced effectively, and restaurants would perform better than usual. In addition to this, human error that occurs when performing tasks manually is also minimized and presence of queues in the system to assign tasks to chefs can reduce congestion in the kitchen. The system would also result in reduction of labor which would result in the reduction of expenses of the restaurant. Feedback module would help the restaurant check for how well they are performing, and monthly/yearly figures can be checked by the billing module to see the trends in sales and profits. These benefits can potentially result in generation of more revenues for the restaurant. 1.5 References 1. Android User Interface Guidelines, Available at: https://developer.android.com/guide/practices/ui_guidelines/ 2. IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998. Software Requirements Specification for DineOut Page 3 2. Overall Description This section will give an overview of the DineOut application. The basic functionality of the system as well its context will be explored in detail. It also describes different kinds of stakeholders and user classes associated with the system and what functionality is available for each class. At last, the assumptions and dependencies for the system are presented. 2.1 Product Perspective DineOut app will attempt to replace the traditional manual ordering process and is a new self- contained software system that consists of two parts: one mobile application and the other is Firebase database. The mobile application will be used for ordering and interacting with the inventory while the Firebase database will be used for storing the inventory and ordering related information about the food items like pending and complete order queues. The mobile application will have five interfaces. Each for Customer, Manager, Head Chef, Admin and Chef. Manager can see/edit the status of available/reserved tables. CustomerÛªs interface will consist of a scrollable menu listing available items and their price. When the customer selects some dishes and place the order, it will be stored in ÛÏpending ordersÛ table in Firebase database. Head ChefÛªs interface will be such that he is notified of the pending order and he is able to assign it to one the available queues of chefs who are then able to see the new order in their screens or on a central display in kitchen. After each item/dish in an order is prepared, the order is marked completed through the Head ChefÛªs interface, the hall manager gets notified through his interface. CustomerÛªs interface has an option for requesting the bill. Bill is printed through the ManagerÛªs interface. Admin can change and modify the Firebase database like add new menus or staff, edit current inventory stock etc. Fig1 - System Perspective Diagram Software Requirements Specification for DineOut Page 4 2.2 Product Functions Given below are the major functions that can be performed using DineOut app. Moreover, a Data Flow Diagram (DFD) for better understanding of the system is also given in Appendix B. The system will: Û¢ Allow Customers to scroll through the menu and select the dishes he/she wants. Û¢ Allow the Customers to cancel/edit the order any time before its prepared. Û¢ Allow Customers to provide feedback regarding the food and overall service of the restaurant. Û¢ Allow Customers to request for bill. Û¢ Allow Customers to ask for help through the system. Û¢ Assign Head Chef to assign the dishes in an order to chefs according to their specialties. Û¢ Show dish queues and their status, for Chefs. Û¢ Allow admin to perform CRUD (create, retrieve, update and delete) operations on Staff Members, Menu Items and Inventory. Û¢ Allow Head Chef to mark orders complete. Û¢ Allow the Head Chef to approve cancellation of dish or order. Û¢ Allow Hall Manager to mark the bill as paid. Û¢ Notify the Hall Manager when a particular order is complete. Û¢ Allow the Hall Manager to see/edit status of tables reserved and available and their capacities. 2.3 User Classes and Characteristics There are four types of users that interact with our system (See appendix B). Firstly, there is a Hall Manager, then Customer, Head Chef and Admin. WeÛªll provide an interface for Chefs as well through which they are looking at the status of their order queues, but they will not interact with our system.",,0.0,0.0,0.0,0.0,0.0,0.0
+12,11.0,"5.4.2 Availability: The system is up and running for most of the time and server is not down for more than a few minutes to avoid inconvenience of the customers. 5.4.3 Correctness: The bill generated by the application must be accurate and the orders placed should exactly be the same which the user has selected. Software Requirements Specification for DineOut Page 20 5.4.4 Flexibility: If need arises in the future, software can be modified to change the requirements. 2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface System should be compatible and will smoothly run on Android version 6.0 or above. 2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 5.4.4 Flexibility: If need arises in the future, software can be modified to change the requirements. 5.4.5 Interoperability: The data is transferred from the customerÛªs end to the kitchen and then head chef assigns orders to each chef. This way data is transferred from one part of the system to another. 5.4.6 Maintainability: Software can be easily repaired if a fault occurs. DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface The customer interface will contain three screens. All three screen will have a consistent layout. 1.1. Place Order In this screen, system shows a list of cards (UI Elements) of dishes. Each dish will have an image, its price per serving.",,0.0,0.0,0.0,0.0,0.0,0.0
+13,11.0,"2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface System should be compatible and will smoothly run on Android version 6.0 or above. 2.5.2 2.5.2 Device Constraint DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces DineOutÛªs core system and its user interfaces should be compatible with tablets. However, running on small android mobile devices is not necessary. Software Requirements Specification for DineOut Page 6 2.6 User Documentation The software is accompanied by the following materials for further help: Ñ User Manual Version 1.0 Ñ Online support at www.dinout.com 2.7 Assumptions and Dependencies One assumption about the software is that it will always be used on tablets that have enough resources to run the application. If the tablet does not have enough hardware resources available for the application, there may be scenarios where the application does not work as intended or not even at all. The application uses Firebase database for online storage of information like orders and menu items that needs to be in working state. If the Firebase interface changes the application needs to be adjusted accordingly. Software Requirements Specification for DineOut Page 7 3. External Interface Requirements 3.1 User Interfaces 1. Customer Interface The customer interface will contain three screens. All three screen will have a consistent layout. 1.1. Place Order In this screen, system shows a list of cards (UI Elements) of dishes. Each dish will have an image, its price per serving. Software Requirements Specification for DineOut Page 1 1. Introduction 1.1 Purpose DineOut is an android application that aims to digitalize the process of various restaurant management operations including ordering and inventory management and POS. This document aims to capture the system requirements and features particularly related to ordering and inventory management to be implemented in DineOut version 1.0., with the later releases on POS (Point of Sale). 1.2 Document Conventions 1.2.1 Priority Conventions In this complete document, we will mention priority as ÛÏlowÛ or ÛÏhighÛ throughout the document. Secondly, priorities are only mentioned in section 4 and section 5 along with detailed description of the requirements. Any high-level requirements mentioned elsewhere are assumed to inherit priorities of their detailed counterparts in section 4,5. 1.2.2 Fonts Conventions Throughout this document, All the user entities are written in capitalizations i.e. first letter as capital. Also, any significant term which has been described in the glossary is made bold and italic in the text. On the other hand, those terms which are significant (but not described in glossary) are bold in text. 1.3 Intended Audience and Reading Suggestions The purpose of this document is to give a detailed description of the requirements for the ÛÏDineOutÛ software. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system requirements as well as non-functional requirements. This document is primarily intended to be proposed to a customer for its approval and also for further processing such as additions to be developed in later releases. Customers can refer to section 3 and 4 for the list of requirements implemented in Version 1.0. Users are advised to refer to user documentation section for tutorials and online support information. This document will also be used as a reference for developing and testing Version 1.0 by the development team as well as the testers. The development team can refer to section 2.3 and 2.6 for system level information and section 3 for system features that are to be implemented in this version of the software. Software Requirements Specification for DineOut Page 2 1.4 Product Scope DineOut is a restaurant management system developed with the intention of automating the day to day tasks in a restaurant like order and inventory management, bill generation and taking feedback. This release of the software would deal with these tasks only whereas more areas might be automated in the future versions of this software. The main purpose is to improve the performance of the restaurant by eradicating the daily paperwork. With this system the tasks would be performed in less amount of time and more efficiently. An additional benefit of this software is that during the rush hours the load can be balanced effectively, and restaurants would perform better than usual. In addition to this, human error that occurs when performing tasks manually is also minimized and presence of queues in the system to assign tasks to chefs can reduce congestion in the kitchen. The system would also result in reduction of labor which would result in the reduction of expenses of the restaurant. Feedback module would help the restaurant check for how well they are performing, and monthly/yearly figures can be checked by the billing module to see the trends in sales and profits. These benefits can potentially result in generation of more revenues for the restaurant. 1.5 References 1. Android User Interface Guidelines, Available at: https://developer.android.com/guide/practices/ui_guidelines/ 2. IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998. Software Requirements Specification for DineOut Page 3 2. Overall Description This section will give an overview of the DineOut application. The basic functionality of the system as well its context will be explored in detail. It also describes different kinds of stakeholders and user classes associated with the system and what functionality is available for each class. At last, the assumptions and dependencies for the system are presented. 2.1 Product Perspective DineOut app will attempt to replace the traditional manual ordering process and is a new self- contained software system that consists of two parts: one mobile application and the other is Firebase database. The mobile application will be used for ordering and interacting with the inventory while the Firebase database will be used for storing the inventory and ordering related information about the food items like pending and complete order queues. The mobile application will have five interfaces. Each for Customer, Manager, Head Chef, Admin and Chef. Manager can see/edit the status of available/reserved tables. CustomerÛªs interface will consist of a scrollable menu listing available items and their price. When the customer selects some dishes and place the order, it will be stored in ÛÏpending ordersÛ table in Firebase database. Head ChefÛªs interface will be such that he is notified of the pending order and he is able to assign it to one the available queues of chefs who are then able to see the new order in their screens or on a central display in kitchen. After each item/dish in an order is prepared, the order is marked completed through the Head ChefÛªs interface, the hall manager gets notified through his interface. CustomerÛªs interface has an option for requesting the bill. Bill is printed through the ManagerÛªs interface. Admin can change and modify the Firebase database like add new menus or staff, edit current inventory stock etc. Fig1 - System Perspective Diagram Software Requirements Specification for DineOut Page 4 2.2 Product Functions Given below are the major functions that can be performed using DineOut app. Moreover, a Data Flow Diagram (DFD) for better understanding of the system is also given in Appendix B. The system will: Û¢ Allow Customers to scroll through the menu and select the dishes he/she wants. Û¢ Allow the Customers to cancel/edit the order any time before its prepared. Û¢ Allow Customers to provide feedback regarding the food and overall service of the restaurant. Û¢ Allow Customers to request for bill. Û¢ Allow Customers to ask for help through the system. Û¢ Assign Head Chef to assign the dishes in an order to chefs according to their specialties. Û¢ Show dish queues and their status, for Chefs. Û¢ Allow admin to perform CRUD (create, retrieve, update and delete) operations on Staff Members, Menu Items and Inventory. Û¢ Allow Head Chef to mark orders complete. Û¢ Allow the Head Chef to approve cancellation of dish or order. Û¢ Allow Hall Manager to mark the bill as paid. Û¢ Notify the Hall Manager when a particular order is complete. Û¢ Allow the Hall Manager to see/edit status of tables reserved and available and their capacities. 2.3 User Classes and Characteristics There are four types of users that interact with our system (See appendix B). Firstly, there is a Hall Manager, then Customer, Head Chef and Admin. WeÛªll provide an interface for Chefs as well through which they are looking at the status of their order queues, but they will not interact with our system. 1.2.1 Priority Conventions In this complete document, we will mention priority as ÛÏlowÛ or ÛÏhighÛ throughout the document. Secondly, priorities are only mentioned in section 4 and section 5 along with detailed description of the requirements. Any high-level requirements mentioned elsewhere are assumed to inherit priorities of their detailed counterparts in section 4,5. 1.2.2 Fonts Conventions Throughout this document, All the user entities are written in capitalizations i.e. first letter as capital. Also, any significant term which has been described in the glossary is made bold and italic in the text. On the other hand, those terms which are significant (but not described in glossary) are bold in text. 1.3 Intended Audience and Reading Suggestions The purpose of this document is to give a detailed description of the requirements for the ÛÏDineOutÛ software. It will illustrate the purpose, scope and complete description for the development of system. It will also explain external interface requirements and system requirements as well as non-functional requirements. This document is primarily intended to be proposed to a customer for its approval and also for further processing such as additions to be developed in later releases. Customers can refer to section 3 and 4 for the list of requirements implemented in Version 1.0. Users are advised to refer to user documentation section for tutorials and online support information. This document will also be used as a reference for developing and testing Version 1.0 by the development team as well as the testers. The development team can refer to section 2.3 and 2.6 for system level information and section 3 for system features that are to be implemented in this version of the software. Software Requirements Specification for DineOut Page 2 1.4 Product Scope DineOut is a restaurant management system developed with the intention of automating the day to day tasks in a restaurant like order and inventory management, bill generation and taking feedback. This release of the software would deal with these tasks only whereas more areas might be automated in the future versions of this software. The main purpose is to improve the performance of the restaurant by eradicating the daily paperwork. With this system the tasks would be performed in less amount of time and more efficiently. An additional benefit of this software is that during the rush hours the load can be balanced effectively, and restaurants would perform better than usual. In addition to this, human error that occurs when performing tasks manually is also minimized and presence of queues in the system to assign tasks to chefs can reduce congestion in the kitchen. The system would also result in reduction of labor which would result in the reduction of expenses of the restaurant. Feedback module would help the restaurant check for how well they are performing, and monthly/yearly figures can be checked by the billing module to see the trends in sales and profits. These benefits can potentially result in generation of more revenues for the restaurant. 1.5 References 1. Android User Interface Guidelines, Available at: https://developer.android.com/guide/practices/ui_guidelines/ 2. IEEE. IEEE Std 830-1998 IEEE Recommended Practice for Software Requirements Specifications. IEEE Computer Society, 1998. Software Requirements Specification for DineOut Page 3 2. Overall Description This section will give an overview of the DineOut application. The basic functionality of the system as well its context will be explored in detail. It also describes different kinds of stakeholders and user classes associated with the system and what functionality is available for each class. At last, the assumptions and dependencies for the system are presented. 2.1 Product Perspective DineOut app will attempt to replace the traditional manual ordering process and is a new self- contained software system that consists of two parts: one mobile application and the other is Firebase database. The mobile application will be used for ordering and interacting with the inventory while the Firebase database will be used for storing the inventory and ordering related information about the food items like pending and complete order queues. The mobile application will have five interfaces. Each for Customer, Manager, Head Chef, Admin and Chef. Manager can see/edit the status of available/reserved tables. CustomerÛªs interface will consist of a scrollable menu listing available items and their price. When the customer selects some dishes and place the order, it will be stored in ÛÏpending ordersÛ table in Firebase database. Head ChefÛªs interface will be such that he is notified of the pending order and he is able to assign it to one the available queues of chefs who are then able to see the new order in their screens or on a central display in kitchen. After each item/dish in an order is prepared, the order is marked completed through the Head ChefÛªs interface, the hall manager gets notified through his interface. CustomerÛªs interface has an option for requesting the bill. Bill is printed through the ManagerÛªs interface. Admin can change and modify the Firebase database like add new menus or staff, edit current inventory stock etc. Fig1 - System Perspective Diagram Software Requirements Specification for DineOut Page 4 2.2 Product Functions Given below are the major functions that can be performed using DineOut app. Moreover, a Data Flow Diagram (DFD) for better understanding of the system is also given in Appendix B. The system will: Û¢ Allow Customers to scroll through the menu and select the dishes he/she wants. Û¢ Allow the Customers to cancel/edit the order any time before its prepared. Û¢ Allow Customers to provide feedback regarding the food and overall service of the restaurant. Û¢ Allow Customers to request for bill. Û¢ Allow Customers to ask for help through the system. Û¢ Assign Head Chef to assign the dishes in an order to chefs according to their specialties. Û¢ Show dish queues and their status, for Chefs. Û¢ Allow admin to perform CRUD (create, retrieve, update and delete) operations on Staff Members, Menu Items and Inventory. Û¢ Allow Head Chef to mark orders complete. Û¢ Allow the Head Chef to approve cancellation of dish or order. Û¢ Allow Hall Manager to mark the bill as paid. Û¢ Notify the Hall Manager when a particular order is complete. Û¢ Allow the Hall Manager to see/edit status of tables reserved and available and their capacities. 2.3 User Classes and Characteristics There are four types of users that interact with our system (See appendix B). Firstly, there is a Hall Manager, then Customer, Head Chef and Admin. WeÛªll provide an interface for Chefs as well through which they are looking at the status of their order queues, but they will not interact with our system. 2.3.1 Customer Class Customers interact with our system directly in order to place order, modify order, get bill and give feedback. We do not store any information related to customers in our system. The process of order taking starts from customers placing order and then the other series of events begin.",,0.0,0.0,0.0,0.0,0.0,0.0
+14,12.0,"This product aimed toward a person who donÛªt want to visit the shop as he might donÛªt get time for that or might not interested in visiting there and dealing with lot of formalities. 2.2 Product Functions: OSS should support this use case: 2.1 Product Perspective: This product aimed toward a person who donÛªt want to visit the shop as he might donÛªt get time for that or might not interested in visiting there and dealing with lot of formalities. 2.2 Product Functions: shop) SRS- Software Requirement Specification GUI- Graphical User Interface OSS- Online shopping System (for electronics item shop) SRS- Software Requirement Specification Software Requirement Specification(SRS) for Online Shopping System(OSS) 1. Intr odu cti o n 1 .1 P u r p o s e: This document is meant to delineate the features of OSS, so as to serve as a guide to the developers on one hand and a software validation document for the prospective client on the other.","This document is meant to delineate the features of OSS, so as to
+serve as a guide to the developers on one hand and a software
+validation document for the prospective client on the other.
+The Online Shopping System (OSS) for electronics item shop
+web application is intended to provide complete solutions for
+vendors as well as customers through a single get way using
+the internet.It will enable vendors to setup online shops,
+customer to browse through the shop and purchase them
+online without having to visit the shop physically. The
+administration module will enable a system administrator to
+approve and reject requests for new shops and maintain
+various lists of shop category.",0.38235294117647056,0.5701754385964912,0.45774647887323944,0.7984176874160767,0.8521060347557068,0.8243886828422546
+15,12.0,"3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - 3.1 Description: 3.1.1 Registration Working of OSS need Internet Connection. 3. Specific Requirements : 3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - 3.1 Description: 3.1 Description: 3.1.1 Registration If customer wants to buy the product then he/she must be registered, unregistered user canÛªt go to the shopping cart. 2.6 Assumptions and Dependencies : Working of OSS need Internet Connection. 3. Specific Requirements : 3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - future extension.Non-Functional Requirements define system properties and constraints. Various other Non-Functional Requirements are: Ä÷ Security Ä÷ Reliability Ä÷ Maintainability Ä÷ Portability Ä÷ Extensibility Ä÷ Reusability Ä÷ Compatibility Ä÷ Resource Utilization 3.3 Performance Requirements: In order to maintain an acceptable speed at maximum number of uploads allowed from a particular customer as any number of users can access to the system at any time. Also the connections to the servers will be based on the attributes of the user like his location and server will be working 24X7 times.","O v e r v i ew:
+This system provides an easy solution for customers to buy
+the product without going to the shop and also to shop owner
+to sale the product.
+This proposed system can be used by any nave users and it
+does not require any educational level,experience or
+technical expertise in computer field but it will be of good use
+if user has the good knowledge of how to operate a
+computer.
+Overall Description:
+The Online Shopping system (OSS) application enables vendors
+to set up online shops, customers to browse through the shops, and a
+system administrator to approve and reject requests for new shops
+and maintain lists of shop categories. Also the developer is designing
+an online shopping site to manage the items in the shop and also
+help customers to purchase them online without visiting the shop
+physically.The online shopping system will use the internet as the sole
+method for selling goods to its consumers.
+2.1 Product Perspective:
+This product aimed toward a person who donÕt
+want to visit
+the shop as he might donÕt get time for that or
+might not interested in visiting there and dealing
+with lot of formalities.
+2.2 Product Functions:
+OSS should support this use case:
+2.3 User Characeristics:
+User should be familiar with the terms like
+login,register,order system etc.
+2.4 Principle Actors:
+2 Principle Actors are Customer and
+Administrator.
+2.5 General Constraints:
+A full internet connection is required for OSS.
+2.6 Assumptions and Dependencies :
+Working of OSS need Internet Connection.",0.40825688073394495,0.33584905660377357,0.36853002070393376,0.7994104623794556,0.8086516857147217,0.8040045499801636
+16,12.0,"2 Principle Actors are Customer and Administrator. 2.5 General Constraints: A full internet connection is required for OSS. 2.6 Assumptions and Dependencies : 2.5 General Constraints: A full internet connection is required for OSS. 2.6 Assumptions and Dependencies : Working of OSS need Internet Connection. 3. Specific Requirements : 2.6 Assumptions and Dependencies : Working of OSS need Internet Connection. 3. Specific Requirements : 3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - GUI- Graphical User Interface Stackholder- The person who will participate in system Ex. Customer, Administrator, Visitor etc. Stackholder- The person who will participate in system Ex. Customer, Administrator, Visitor etc. 1.4 References:","The software system being produced is called Book E-Commerce System or BECS. It is
+being produced for a customer interested in selling books via the Internet. This system is
+designed to Òprovide automation supportÓ [2] for the process of placing books for sale on
+the Internet and facilitating the actual sale. This system is largely cross-platform and is
+available to anyone using the Computer Science DepartmentÕs provided computer
+resources in the MSU Engineering Building. The system will be run on a central server
+with each user having a remote user interface through a web browser to interact with it.
+The Book E-Commerce System will allow any user to create an account to become a
+customer. The customer, through the process of account creation, will have the option to
+become a member of the site. The system will allow customers to browse, search, select,
+and add books to a shopping cart. Then, provided they have books in their shopping cart,
+check out books in shopping cart and decrement the stock that the inventory the system
+maintains. The BECS also allows a manager to manage the inventory with full create,
+retrieve, update and delete (CRUD) functionality with regards to books in the system. It
+will also allow, on an inventory wide basis, customers and managers to interact with a
+promotion system that handles percentage-off promotions that can be applied to
+memberÕs orders. This interaction includes the creation (by managers) and the application
+to orders (by customers) of the promotions. The BECS has full email capabilities; the
+automated email functionality will be used to send promotions to members of the system
+as well as provide the managers with low-stock notifications.
+The BECS will have numerous constraints on what it can do. The system will not have
+full credit-card processing capabilities. It will not allow managers to be customers. The
+manager will be a hard-coded user and only a single manager will exist. There will be no
+actual book ordering and order completion, however the system will provide the
+customer with a receipt and it will log the transaction details. The system will not allow
+multiple promotions to be added to a single shopping cart nor will it allow a customer to
+add more than one of each item to their cart. The system also will not allow users to
+retrieve passwords or edit their user details.",0.38016528925619836,0.11442786069651742,0.17590822179732316,0.7874945402145386,0.7833508849143982,0.7854172587394714
+17,12.0,"3.1.6 Report Generation After ordering for the product,the system will sent one copy of the bill to the customerÛªs Email-address and another one for the system data base. 3.2 Non-Functional Requirements: Following Non-Functional Requirements will be there in the insurance to the internet: 3.2 Non-Functional Requirements: Following Non-Functional Requirements will be there in the insurance to the internet: (i) Secure access to consumerÛªs confidential data. (ii) 24X7 availability . After ordering or surfing for the product customer has to logout. 3.1.6 Report Generation After ordering for the product,the system will sent one copy of the bill to the customerÛªs Email-address and another one for the system data base. 3.2 Non-Functional Requirements: Following Non-Functional Requirements will be there in the insurance to the internet: (i) Secure access to consumerÛªs confidential data. extend this to credit card,debit card etc in the future. 3.1.5 Logout After ordering or surfing for the product customer has to",Working of OSS need Internet Connection.,0.011428571428571429,0.3333333333333333,0.022099447513812154,0.7451019883155823,0.8657438158988953,0.8009052872657776
+18,12.0,"3.2 Non-Functional Requirements: Following Non-Functional Requirements will be there in the insurance to the internet: (i) Secure access to consumerÛªs confidential data. (ii) 24X7 availability . time. (iv) Flexible service based architecture will be highly desirable for future extension.Non-Functional Requirements define system properties and constraints. Various other Non-Functional Requirements are: 3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - 3.1 Description: 3.1.1 Registration 3.1.6 Report Generation After ordering for the product,the system will sent one copy of the bill to the customerÛªs Email-address and another one for the system data base. 3.2 Non-Functional Requirements: Following Non-Functional Requirements will be there in the insurance to the internet: Working of OSS need Internet Connection. 3. Specific Requirements : 3.1 Functional Requirements: This section provides requirement overview of the system. Various functional modules that can be implemented by the system will be - 3.1 Description:","33. Specific Requirements:
+3.1 Functional Requirements:
+This section provides requirement overview of the
+system.
+Various functional modules that can be implemented by
+the system will be -
+3.1 Description:
+3.1.1 Registration
+If customer wants to buy the product then he/she must
+be
+registered, unregistered user canÕt go to the shopping
+cart.
+3.1.2 Login
+Customer logins to the system by entering
+valid user id and password for the
+shopping.
+3.1.3 Changes to Cart
+Changes to cart means the customer after
+login or registration can make order or
+cancel order of the product from the
+shopping cart.
+3.1.4 Payment
+In this system we are dealing the mode of payment
+by Cash.We will
+extend this to credit card,debit card etc in the future.
+3.1.5 Logout
+After ordering or surfing for
+the product customer has to
+logout.
+3.1.6 Report Generation
+After ordering for the product,the system
+will sent one copy of the bill to the
+customerÕs Email-address and another one
+for the system data base.
+3.2 Non-Functional Requirements:
+Following Non-Functional Requirements will be there in the
+insurance to the internet:
+(i) Secure access to consumerÕs confidential data.
+(ii) 24X7 availability.
+(iii) Better component design to get better performance at peak
+time.
+(iv) Flexible service based architecture will be highly desirable for
+future extension.Non-Functional Requirements define system
+properties and constraints.
+Various other Non-Functional Requirements are:
+_ Security
+_ Reliability
+_ Maintainability
+_ Portability
+_ Extensibility
+_ Reusability
+_ Compatibility
+_ Resource Utilization
+3.3 Performance Requirements:
+In order to maintain an acceptable speed at maximum number of
+uploads allowed from a particular customer as any number of users
+can access to the system at any time.
+Also the connections to the servers will be based on the attributes of the
+user like his location and server will be working 24X7 times.
+3.4 T e c h n i c a l I s s u e s:
+This system will work on client-server
+architecture. It will require an internet
+server and which will be able to run PHP
+application. The system should support
+some commonly used browser such as IE,
+mozzila firefox,chrome etc.
+4 . Inter f ace
+Re q u i re m e n t:
+Various interfaces for the product could be-
+1). Login Page
+2). Registration Form
+3). There will be a screen displaying information
+about product that the shop having.
+4). If the customers select the buy button
+then another screen of shopping cart will be
+opened.
+5). After ordering for the product,the system will
+sent one copyof the bill to the customerÕs Emailaddress
+Software Interface:
+1.Operating System:Windows7 Ultimate which
+supports networking.
+2.JAVA development toolkit.
+Hardware Interface:
+Hardware requirements for insurance on internet
+will be same for both parties which are as follows:
+Processor:Dual Core
+RAM:2 GB
+Hard Disk:320 GB
+NIC:For each party
+Communication Interfaces:
+The two parties should be connected by LAN or
+WAN for the communication purpose.",0.9137931034482759,0.31299212598425197,0.46627565982404695,0.8842770457267761,0.8308436274528503,0.8567280173301697
+19,12.0,"(iii) Better component design to get better performance at peak time. (iv) Flexible service based architecture will be highly desirable for 3.3 Performance Requirements: In order to maintain an acceptable speed at maximum number of uploads allowed from a particular customer as any number of users can access to the system at any time. Also the connections to the servers will be based on the attributes of the user like his location and server will be working 24X7 times. 3.4 T e c h n i c a l I s s u e s: This system will work on client-server architecture. It will require an internet server and which will be able to run PHP application. The system should support some commonly used browser such as IE, mozzila firefox,chrome etc. 4 . Inter f ace Re q u i re m e n t: Software Interface: 1.Operating System:Windows7 Ultimate which supports networking. 2.JAVA development toolkit. This system will work on client-server architecture. It will require an internet server and which will be able to run PHP application. The system should support some commonly used browser such as IE, mozzila firefox,chrome etc. 4 . Inter f ace Re q u i re m e n t: Various interfaces for the product could be- 1). Login Page 2). Registration Form 3). There will be a screen displaying information about product that the shop having. 4). If the customers select the buy button then another screen of shopping cart will be opened. 5). After ordering for the product,the system will sent one copyof the bill to the customerÛªs Email- address Software Interface: time. (iv) Flexible service based architecture will be highly desirable for future extension.Non-Functional Requirements define system properties and constraints. Various other Non-Functional Requirements are:","It is a way of representing system requirements in
+graphical form;this led to modular design.A DFD
+describes a data flow(logical) rather than how they are
+processed.So they do not depend upon
+software,hardware,data structure or file organization.It
+is also known as Ôbubble sortÕ.
+A DFD is a structured analysis and a design tool that
+can be used for flowcharting in place of ,or in
+association with ,information-oriented and processoriented
+system flowcharts.
+A DFD is considered as an abstract of the logic of
+information-oriented or process-oriented system
+flowchart.The four basic symbols used to construct data
+flow diagrams are-
+A rectangle represents a data
+source or destination.
+The points at which data is transformed are called as
+nodes.The principle processes that take place at nodes
+are:
+1.Combining data streams
+2.Splitting data streams
+3.Modifiying data streams",0.14705882352941177,0.30612244897959184,0.1986754966887417,0.7718057036399841,0.800751805305481,0.7860124111175537
+20,12.0,"2.3 User Characeristics: User should be familiar with the terms like login,register,order system etc. 2.4 Principle Actors: OSS should support this use case: 2.3 User Characeristics: User should be familiar with the terms like login,register,order system etc. 2.2 Product Functions: OSS should support this use case: 2.3 User Characeristics: User should be familiar with the terms like If customer wants to buy the product then he/she must be registered, unregistered user canÛªt go to the shopping cart. 3.1.2 Login Customer logins to the system by entering valid user id and password for the shopping. 1.4 References: 1.5 O v e r v i ew: This system provides an easy solution for customers to buy the product without going to the shop and also to shop owner to sale the product. This proposed system can be used by any naÌøve users and it does not require any educational level,experience or technical expertise in computer field but it will be of good use if user has the good knowledge of how to operate a computer.","The Online Shopping System (OSS) for electronics item shop
+web application is intended to provide complete solutions for
+vendors as well as customers through a single get way using
+the internet.It will enable vendors to setup online shops,
+customer to browse through the shop and purchase them
+online without having to visit the shop physically. The
+administration module will enable a system administrator to
+approve and reject requests for new shops and maintain
+various lists of shop category",0.16842105263157894,0.4050632911392405,0.2379182156133829,0.7972283959388733,0.833261251449585,0.8148466944694519
+21,15.0,"Use-Cases: None Class Diagram  The purpose of this diagram is to show how objects within the BECS system will interact with each other in order to achieve the functionality required by the Use Case diagram. Below is a list of what you will see in the diagram itself as well as the class descriptions that follow. Classes  Rectangles in the diagram that are split into three parts. The top section is the name of the class, the middle section is the list of variables that are stored in the class and the bottom section is the list of functions in the class. These rectangles represent objects within the system. Variables The purpose of this diagram is to show how objects within the BECS system will interact with each other in order to achieve the functionality required by the Use Case diagram. Below is a list of what you will see in the diagram itself as well as the class descriptions that follow. Classes  Rectangles in the diagram that are split into three parts. The top section is the name of the class, the middle section is the list of variables that are stored in the class and the bottom section is the list of functions in the class. These rectangles represent objects within the system. Variables  These have a name followed by a semicolon and then a type. The type denotes what kind of data can be stored in the variable. Functions The information related to a customer's purchase that is logged User  The person who operate the software product. 1.4 Organization  This Software Requirements Specification document is divided in to multiple subsections. The first section includes explanations of the Purpose, Scope and Organization of the document. The first section also handles the description of project- specific words, acronyms and abbreviations that will be used in the document. The second section of the document is separated into the following five different sections, each detailing specific details of system uses and their corresponding actions: Product Perspective, Product Functions, User Characteristics, Constraints, Assumptions and Dependencies, Apportioning of Requirements. The third section is an enumerated listing of all of the requirements described for this system. The fourth section encompasses all of the Use-case, Sequence, State and Class diagrams that model the system. In the fifth section there exists a Prototype of the system along with a sample scenario that graphically describes the use of the system. The sixth section contains a listing of all related reference materials used in this document. The seventh and final subsection is dedicated to providing a point of contact for any viewer of this document. 2 Overall Description The purpose of this diagram is to demonstrate how objects will interact with BECS and map out the basic functionality of the system. Below is a list of the elements that you will see in the diagram on the next page as well what is included in the use case templates that follow. Actors  Shown in the diagram as stick figures with a name underneath. They represent elements that will be directly interacting with the system.  Use Cases Oval shapes that have their names in the center. These represent direct functionality within the system that must be implemented. Interactions Rectangles in the diagram that are split into three parts. The top section is the name of the class, the middle section is the list of variables that are stored in the class and the bottom section is the list of functions in the class. These rectangles represent objects within the system. Variables  These have a name followed by a semicolon and then a type. The type denotes what kind of data can be stored in the variable. Functions  These have a name followed by a list of any variable that the function receives in-between the parenthesis ÛÏ()Û. After that there is a semicolon and any variables that the function may return, if none it will be void. Generalizations 
+","Defining and describing the functions and specifications of the Book E-Commerce
+System (BECS) is the primary goal of this Software Requirements Specification (SRS).
+This Software Requirements Specification illustrates, in clear terms, the systemÕs primary
+uses and required functionality as specified by our customer.
+The intended audience of this document is our primary Book E-Commerce System
+customer: Mr. Borzoo Bonakdarpour, the CSE435 instructor Dr. Betty Cheng, the fall
+semester 2007 CSE435 Group 4 members, as well as the other students attending
+CSE435 that will require access to such documentation.",0.0770392749244713,0.5604395604395604,0.1354581673306773,0.7797561287879944,0.8106386065483093,0.7948974967002869
+22,15.0,Type: Primary Description: Lets the Manager edit all of the attributes of a particular item in the inventory. Includes: None Extends: None Actors: Customer Type: Primary Description: If the user is a member they are presented with the option to enter in a promotion code that will take off a percentage from the total. Includes: None Type: Secondary Description: Reorders a particular item and emails the manager. Includes: None Extends: None Type: Primary Description: If the user is a member they are presented with the option to enter in a promotion code that will take off a percentage from the total. Includes: None Extends: None Actors: System Type: Secondary Description: Reorders a particular item and emails the manager. Includes: None,"2.1 Product Perspective
+BECS is an online bookstore website which supports a number of functions for both the
+consumer and store's management.
+The website must be available to anyone using the Computer Science DepartmentÕs
+provided computer resources in the MSU Engineering Building and as such must work
+correctly in both Internet Explorer and Mozilla Firefox. As stated by the customer, there
+are no hardware or software requirements beyond these including, but not limited to,
+memory or specific software packages that need to be utilized nor software packages that
+need not be utilized.
+2.2 Product Functions
+BECS will provide a number of functions; each is listed below.
+¥ Maintain data associated with the inventory (a collection of books)
+¥ A book has a title, author and price
+¥ The inventory also keep track of the stock/quantity of each book
+¥ Maintain records for many customers
+¥ A customer can be either a member or non-member.
+¥ A customer has a username (unique across all users), password (no restrictions), email
+address (no restrictions), and postal address (unverified.)
+¥ Anyone may sign up for a customer account.
+¥ Allow any customer to become a member.
+¥ Show a listing of available books
+¥ Books are to be displayed in ascending alphabetical order by title.
+¥ Each book will list the following from left to right
+¥ Title
+¥ Author
+¥ Price
+¥ Allow customers and managers to log in and out of the system.
+¥ Users (both customers and the manager) will be logged out if inactive for 30 minutes.
+¥ Shopping cart
+¥ Anyone is able to add one or more books to the shopping cart.
+¥ The shopping cart does not need to allow multiple copies of any book.
+¥ Checkout
+¥ Checkout is only available to logged-in customers. A user that is not logged in as a
+customer is given a chance to log in.
+¥ Member customers may enter a promotion code.
+¥ Only one promotion code may be used per purchase
+¥ The promotion is a fixed percentage discount that is to be applied to an entire order.
+¥ The discount is specified by the manager at the time of the promotionÕs creation or
+most recent update/edit.
+¥ Collect a 16-digit credit card number from the customer
+¥ Log/record the transaction
+¥ Allow manager to specify a stop-order for a book
+¥ Each book has its own stop-order status Ð either on or off. Details of its use are involved
+in the following feature.
+¥ Notify manager when books need to be reordered
+¥ When the quantity a book falls below a threshold, the manager is notified that the book
+Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have
+been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu)
+needs to be reordered.
+¥ One exception is if the manager has already specified a stop-order for this book.
+¥ Every book must either have stop-order enabled or disabled
+¥ Allow manager to update stock quantities
+¥ Allow manager to change any book's price
+¥ Allow manager to view transaction logs
+¥ Allow manager to create promotions
+¥ A promotion is a percentage discount that can be applied to an entire order
+¥ Promotions may only be used by member customers
+¥ A promotion has an expiration date specified by the manager
+When a promotion is created, it is emailed to all member customers via the email address on
+record",0.5583333333333333,0.11985688729874776,0.19734904270986742,0.7895002365112305,0.7717044353485107,0.7805009484291077
+23,15.0,"Variables - TimeDate:Time, Username:String, Items:Vector Functions - None Class Generalization: None Variables - TimeDate:Time, Username:String, Items:Vector Functions - None User Functions - Login(), Logout() Class Variables - IsMember:Boolean Customer Functions - None Variables - Username:String, Password:String, Email:String, LastActivity:Time, PostalAddress:String, Name:String, LoggedIn:Boolean User Functions - Login(), Logout()","The software system being produced is called Book E-Commerce System or BECS. It is
+being produced for a customer interested in selling books via the Internet. This system is
+designed to Òprovide automation supportÓ [2] for the process of placing books for sale on
+the Internet and facilitating the actual sale. This system is largely cross-platform and is
+available to anyone using the Computer Science DepartmentÕs provided computer
+resources in the MSU Engineering Building. The system will be run on a central server
+with each user having a remote user interface through a web browser to interact with it.
+The Book E-Commerce System will allow any user to create an account to become a
+customer. The customer, through the process of account creation, will have the option to
+become a member of the site. The system will allow customers to browse, search, select,
+and add books to a shopping cart. Then, provided they have books in their shopping cart,
+check out books in shopping cart and decrement the stock that the inventory the system
+maintains. The BECS also allows a manager to manage the inventory with full create,
+retrieve, update and delete (CRUD) functionality with regards to books in the system. It
+will also allow, on an inventory wide basis, customers and managers to interact with a
+promotion system that handles percentage-off promotions that can be applied to
+memberÕs orders. This interaction includes the creation (by managers) and the application
+to orders (by customers) of the promotions. The BECS has full email capabilities; the
+automated email functionality will be used to send promotions to members of the system
+as well as provide the managers with low-stock notifications.
+The BECS will have numerous constraints on what it can do. The system will not have
+full credit-card processing capabilities. It will not allow managers to be customers. The
+manager will be a hard-coded user and only a single manager will exist. There will be no
+actual book ordering and order completion, however the system will provide the
+customer with a receipt and it will log the transaction details. The system will not allow
+multiple promotions to be added to a single shopping cart nor will it allow a customer to
+add more than one of each item to their cart. The system also will not allow users to
+retrieve passwords or edit their user details.",0.1568627450980392,0.01990049751243781,0.03532008830022075,0.7375162839889526,0.7519192099571228,0.7446481585502625
+24,15.0,"(or any item) in a single transaction. Û¢ The manager accountÛªs username and password maybe hard coded. Û¢ The manager cannot be a customer. Û¢ Any user cannot edit their account information. 2.6 Approportioning of Requirements As stated by the customer, security is not a concern of this project. As such, it is beyond the scope of this system to encrypt personal user data, encrypt credit card information, prevent unauthorized login attempts, or any other concern of this nature. Additionally, the system is not responsible for the following: Defining and describing the functions and specifications of the Book E-Commerce System (BECS) is the primary goal of this Software Requirements Specification (SRS). This Software Requirements Specification illustrates, in clear terms, the systemÛªs primary uses and required functionality as specified by our customer. The intended audience of this document is our primary Book E-Commerce System customer: Mr. Borzoo Bonakdarpour, the CSE435 instructor Dr. Betty Cheng, the fall semester 2007 CSE435 Group 4 members, as well as the other students attending CSE435 that will require access to such documentation. Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 1.2 Scope The software system being produced is called Book E-Commerce System or BECS. It is being produced for a customer interested in selling books via the Internet. This system is designed to ÛÏprovide automation supportÛ [2] for the process of placing books for sale on the Internet and facilitating the actual sale. This system is largely cross-platform and is available to anyone using the Computer Science DepartmentÛªs provided computer resources in the MSU Engineering Building. The system will be run on a central server with each user having a remote user interface through a web browser to interact with it. The Book E-Commerce System will allow any user to create an account to become a customer. The customer, through the process of account creation, will have the option to become a member of the site. The system will allow customers to browse, search, select, and add books to a shopping cart. Then, provided they have books in their shopping cart, check out books in shopping cart and decrement the stock that the inventory the system maintains. The BECS also allows a manager to manage the inventory with full create, retrieve, update and delete (CRUD) functionality with regards to books in the system. It will also allow, on an inventory wide basis, customers and managers to interact with a promotion system that handles percentage-off promotions that can be applied to memberÛªs orders. This interaction includes the creation (by managers) and the application to orders (by customers) of the promotions. The BECS has full email capabilities; the automated email functionality will be used to send promotions to members of the system as well as provide the managers with low-stock notifications. The BECS will have numerous constraints on what it can do. The system will not have full credit-card processing capabilities. It will not allow managers to be customers. The manager will be a hard-coded user and only a single manager will exist. There will be no actual book ordering and order completion, however the system will provide the customer with a receipt and it will log the transaction details. The system will not allow multiple promotions to be added to a single shopping cart nor will it allow a customer to add more than one of each item to their cart. The system also will not allow users to retrieve passwords or edit their user details. 1.3 Definitions, acronyms, and abbreviations BECS Book E-Commerce System Barcode Additionally, the system may need to later be extended to provide additional functions. Additionally, the system may need to later be extended to provide additional functions. One such example is added support for visually impaired users. In many cases a screen- reading program is used and ensuring that page-layout reads from top-left to bottom-right in a logical manner would be required. 3 Specific Requirements 1. Restrictions 1.1. User Side 1.1.1. Software 1.1.1.1. Internet Explorer or Mozilla Firefox 1.1.2. Hardware 1.1.2.1. Computer Science Department Laboratory Terminal 1.2. System Side 1.2.1. Software 1.2.1.1. Web-based application 1.2.1.2. Database information storage system 2. Data Structure 2.1. Book has these attributes 2.1.1. Unique ID (auto-increment starting at 1) 2.1.2. Title 2.1.3. Author 2.1.4. Price 2.1.5. Reorder Threshold 2.1.6. Stop-order Boolean value 2.1.7. Stock 2.2. Customer has these attributes 2.2.1. Unique Username 2.2.2. Password 2.2.3. Name 2.2.4. Email Address 2.2.5. Postal Address 2.2.6. Member/Not Member Boolean value 2.3. Manager has these attributes 2.3.1. Username 2.3.2. Password 2.3.3. Email address 2.4. Order log entries have these attributes: 2.4.1. Unique ID (auto generated) Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 2.4.2. Time transaction took place 2.4.3. Date transaction took place 2.4.4. Username of customer 2.4.5. Listing of the contents in customerÛªs shopping cart 3. System 3.1. Browse Inventory 3.1.1. Organization 3.1.1.1. Items Listed on single page 3.1.1.2. Items shown in tabular format 3.1.1.3. Each Item listing contains 3.1.1.3.1. Title 3.1.1.3.2. Name of Author 3.1.1.3.3. Price 3.1.1.4. Listing sorted by Ascending item Title 3.1.1.5. No individual Item pages 3.1.2. Interaction 3.1.2.1. Each Item has checkbox to mark selection 3.1.2.2. Single button to add all selected items to Shopping Cart 3.2. Search Inventory 3.2.1. Search available only by Title of book 3.2.2. Search is exact-match only 3.3. Create, Update and Destroy (CRUD) Functionality 3.3.1. Only managers are allowed to modify inventory 3.3.2. Managers have an interface to: 3.3.2.1. Create a book entry 3.3.2.2. Update a book entry 3.3.2.3. Update the stock/quantity of a particular book 3.3.2.4. Create a new promotion 3.3.2.5. Review current inventory 3.3.2.5.1. Using the same interface to browse inventory as described in section 3.1, the manager has an additional ÛÏEdit ItemÛ option for each book. 3.3.2.5.1.1. Manager has full CRUD capabilities on each book. 3.3.3. Managers may delete items from the inventory 3.4. Shopping Cart 3.4.1. Logged In 3.4.1.1. Can add items to cart 3.4.1.1.1. If Item is not in stock, message displayed informing user to try again later 3.4.1.1.2. Customer can only purchase one of each item (no quantities associated with orders) 3.4.1.1.3. 3.4.1.2. If shopping cart not empty, a user may begin Checkout procedure 3.4.2. Not Logged In 3.4.2.1. Can add items to cart 3.4.2.2. User required to login before they may begin Checkout procedure 3.5. Checkout procedure 3.5.1. User must successfully use shopping cart before beginning this procedure 3.5.2. Checkout page consists of 3.5.2.1. A text box for promotion entering 3.5.2.2. An overview of the purchase Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 3.5.2.3. A text box to hold the credit card number 3.5.2.4. A button to complete the order 3.5.3. Order details sent via email after the checkout has completed 3.5.4. On order completion the inventory is decremented based on items purchased by user 3.6. Authentication System 3.6.1. User Levels 3.6.1.1. Manager (single, hardcoded user, no orders) 3.6.1.2. Customer (unlimited, open creation, unlimited orders) 3.6.2. Account Creation 3.6.2.1. Everyone is allowed to create an account 3.6.2.2. Required Information 3.6.2.2.1. Listed in section 2.2 3.6.3. Account Modification 3.6.3.1. Users are not able to modify any aspect of their account after creation (ÛÏit would be nice but not neededÛ) 3.6.4. Login and Logout 3.6.4.1. There is no lost-password recovery 3.6.4.2. Logging in allows one to logout 3.6.4.3. Logging in allows checkout 3.6.4.4. There is a 30-minute session time out after which a logged in user will be logged out automatically. 3.7. Promotions 3.7.1. Specifications 3.7.1.1. Applies to entire order 3.7.1.2. Percentage-off type promotion (x% off entire order) 3.7.1.3. Expiration occurs at manager specified date 3.7.1.4. Multiple coupons cannot be applied to same order 3.7.1.5. Non-member users cannot apply promotions to order 3.7.2. Creation 3.7.2.1. Promotion created by manager 3.7.2.2. Each promotion has a unique identifying number (can be auto generated) 3.7.2.3. Email containing promotion sent to all member users of the BECS system 3.7.2.4. 3.7.3. Deletion 3.7.3.1. Promotions are auto-deleted when the expiration date has passed 3.8. Automated Reorder 3.8.1. Specifications 3.8.1.1. Manager sets reorder threshold on a per-item basis 3.8.1.2. If item reaches the reorder threshold, an email is sent informing the manager of the itemÛªs status and the system automatically reorders the item 3.8.1.2.1. If the item has a stop-order applied to it, it will not automatically reorder until the manager removes it. 3.8.1.3. A manager may increase the stock of an item using the managerÛªs account 3.9. Order Logging 3.9.1. Specifications 3.9.1.1. Required Information: 3.9.1.1.1. Listed in section 2.4 3.9.1.2. A manager can view all past transactions from all users Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) Order log entries are generated when a user successfully checks out their shopping cart 4 Modeling Requirements Use Case Diagram The purpose of this diagram is to demonstrate how objects will interact with BECS and map out the basic functionality of the system. Below is a list of the elements that you will see in the diagram on the next page as well what is included in the use case templates that follow. Actors Shown in the diagram as stick figures with a name underneath. They represent elements that will be directly interacting with the system. manager Additionally, the system may need to later be extended to provide additional functions. Additionally, the system may need to later be extended to provide additional functions. One such example is added support for visually impaired users. In many cases a screen- reading program is used and ensuring that page-layout reads from top-left to bottom-right in a logical manner would be required. 3 Specific Requirements 1. Restrictions 1.1. User Side 1.1.1. Software 1.1.1.1. Internet Explorer or Mozilla Firefox 1.1.2. Hardware 1.1.2.1. Computer Science Department Laboratory Terminal 1.2. System Side 1.2.1. Software 1.2.1.1. Web-based application 1.2.1.2. Database information storage system 2. Data Structure 2.1. Book has these attributes 2.1.1. Unique ID (auto-increment starting at 1) 2.1.2. Title 2.1.3. Author 2.1.4. Price 2.1.5. Reorder Threshold 2.1.6. Stop-order Boolean value 2.1.7. Stock 2.2. Customer has these attributes 2.2.1. Unique Username 2.2.2. Password 2.2.3. Name 2.2.4. Email Address 2.2.5. Postal Address 2.2.6. Member/Not Member Boolean value 2.3. Manager has these attributes 2.3.1. Username 2.3.2. Password 2.3.3. Email address 2.4. Order log entries have these attributes: 2.4.1. Unique ID (auto generated) Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 2.4.2. Time transaction took place 2.4.3. Date transaction took place 2.4.4. Username of customer 2.4.5. Listing of the contents in customerÛªs shopping cart 3. System 3.1. Browse Inventory 3.1.1. Organization 3.1.1.1. Items Listed on single page 3.1.1.2. Items shown in tabular format 3.1.1.3. Each Item listing contains 3.1.1.3.1. Title 3.1.1.3.2. Name of Author 3.1.1.3.3. Price 3.1.1.4. Listing sorted by Ascending item Title 3.1.1.5. No individual Item pages 3.1.2. Interaction 3.1.2.1. Each Item has checkbox to mark selection 3.1.2.2. Single button to add all selected items to Shopping Cart 3.2. Search Inventory 3.2.1. Search available only by Title of book 3.2.2. Search is exact-match only 3.3. Create, Update and Destroy (CRUD) Functionality 3.3.1. Only managers are allowed to modify inventory 3.3.2. Managers have an interface to: 3.3.2.1. Create a book entry 3.3.2.2. Update a book entry 3.3.2.3. Update the stock/quantity of a particular book 3.3.2.4. Create a new promotion 3.3.2.5. Review current inventory 3.3.2.5.1. Using the same interface to browse inventory as described in section 3.1, the manager has an additional ÛÏEdit ItemÛ option for each book. 3.3.2.5.1.1. Manager has full CRUD capabilities on each book. 3.3.3. Managers may delete items from the inventory 3.4. Shopping Cart 3.4.1. Logged In 3.4.1.1. Can add items to cart 3.4.1.1.1. If Item is not in stock, message displayed informing user to try again later 3.4.1.1.2. Customer can only purchase one of each item (no quantities associated with orders) 3.4.1.1.3. 3.4.1.2. If shopping cart not empty, a user may begin Checkout procedure 3.4.2. Not Logged In 3.4.2.1. Can add items to cart 3.4.2.2. User required to login before they may begin Checkout procedure 3.5. Checkout procedure 3.5.1. User must successfully use shopping cart before beginning this procedure 3.5.2. Checkout page consists of 3.5.2.1. A text box for promotion entering 3.5.2.2. An overview of the purchase Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 3.5.2.3. A text box to hold the credit card number 3.5.2.4. A button to complete the order 3.5.3. Order details sent via email after the checkout has completed 3.5.4. On order completion the inventory is decremented based on items purchased by user 3.6. Authentication System 3.6.1. User Levels 3.6.1.1. Manager (single, hardcoded user, no orders) 3.6.1.2. Customer (unlimited, open creation, unlimited orders) 3.6.2. Account Creation 3.6.2.1. Everyone is allowed to create an account 3.6.2.2. Required Information 3.6.2.2.1. Listed in section 2.2 3.6.3. Account Modification 3.6.3.1. Users are not able to modify any aspect of their account after creation (ÛÏit would be nice but not neededÛ) 3.6.4. Login and Logout 3.6.4.1. There is no lost-password recovery 3.6.4.2. Logging in allows one to logout 3.6.4.3. Logging in allows checkout 3.6.4.4. There is a 30-minute session time out after which a logged in user will be logged out automatically. 3.7. Promotions 3.7.1. Specifications 3.7.1.1. Applies to entire order 3.7.1.2. Percentage-off type promotion (x% off entire order) 3.7.1.3. Expiration occurs at manager specified date 3.7.1.4. Multiple coupons cannot be applied to same order 3.7.1.5. Non-member users cannot apply promotions to order 3.7.2. Creation 3.7.2.1. Promotion created by manager 3.7.2.2. Each promotion has a unique identifying number (can be auto generated) 3.7.2.3. Email containing promotion sent to all member users of the BECS system 3.7.2.4. 3.7.3. Deletion 3.7.3.1. Promotions are auto-deleted when the expiration date has passed 3.8. Automated Reorder 3.8.1. Specifications 3.8.1.1. Manager sets reorder threshold on a per-item basis 3.8.1.2. If item reaches the reorder threshold, an email is sent informing the manager of the itemÛªs status and the system automatically reorders the item 3.8.1.2.1. If the item has a stop-order applied to it, it will not automatically reorder until the manager removes it. 3.8.1.3. A manager may increase the stock of an item using the managerÛªs account 3.9. Order Logging 3.9.1. Specifications 3.9.1.1. Required Information: 3.9.1.1.1. Listed in section 2.4 3.9.1.2. A manager can view all past transactions from all users Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) Order log entries are generated when a user successfully checks out their shopping cart 4 Modeling Requirements Use Case Diagram The purpose of this diagram is to demonstrate how objects will interact with BECS and map out the basic functionality of the system. Below is a list of the elements that you will see in the diagram on the next page as well what is included in the use case templates that follow. Actors The Software Requirements Specification is designed to document and describe the agreement between the customer and the developer regarding the specification of the software product requested [5]. Its primary purpose is to provide a clear and descriptive ÛÏstatement of user requirementsÛ [5] that can be used as a reference in further development of the software system. This document is broken into a number of sections used to logically separate the software requirements into easily referenced parts. This Software Requirements Specification aims to describe the Functionality, External Interfaces, Attributes and Design Constraints [4] imposed on Implementation of the software system described throughout the rest of the document. Throughout the description of the software system, the language and terminology used should unambiguous and consistent throughout the document. 1.1 Purpose Defining and describing the functions and specifications of the Book E-Commerce System (BECS) is the primary goal of this Software Requirements Specification (SRS). This Software Requirements Specification illustrates, in clear terms, the systemÛªs primary uses and required functionality as specified by our customer. The intended audience of this document is our primary Book E-Commerce System customer: Mr. Borzoo Bonakdarpour, the CSE435 instructor Dr. Betty Cheng, the fall semester 2007 CSE435 Group 4 members, as well as the other students attending CSE435 that will require access to such documentation. Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu) 1.2 Scope The software system being produced is called Book E-Commerce System or BECS. It is being produced for a customer interested in selling books via the Internet. This system is designed to ÛÏprovide automation supportÛ [2] for the process of placing books for sale on the Internet and facilitating the actual sale. This system is largely cross-platform and is available to anyone using the Computer Science DepartmentÛªs provided computer resources in the MSU Engineering Building. The system will be run on a central server with each user having a remote user interface through a web browser to interact with it. The Book E-Commerce System will allow any user to create an account to become a customer. The customer, through the process of account creation, will have the option to become a member of the site. The system will allow customers to browse, search, select, and add books to a shopping cart. Then, provided they have books in their shopping cart, check out books in shopping cart and decrement the stock that the inventory the system maintains. The BECS also allows a manager to manage the inventory with full create, retrieve, update and delete (CRUD) functionality with regards to books in the system. It will also allow, on an inventory wide basis, customers and managers to interact with a promotion system that handles percentage-off promotions that can be applied to memberÛªs orders. This interaction includes the creation (by managers) and the application to orders (by customers) of the promotions. The BECS has full email capabilities; the automated email functionality will be used to send promotions to members of the system as well as provide the managers with low-stock notifications. The BECS will have numerous constraints on what it can do. The system will not have full credit-card processing capabilities. It will not allow managers to be customers. The manager will be a hard-coded user and only a single manager will exist. There will be no actual book ordering and order completion, however the system will provide the customer with a receipt and it will log the transaction details. The system will not allow multiple promotions to be added to a single shopping cart nor will it allow a customer to add more than one of each item to their cart. The system also will not allow users to retrieve passwords or edit their user details. 1.3 Definitions, acronyms, and abbreviations BECS","Client:
+We have assumed that all of the computer systems in the Engineering building labs are in
+proper working condition and that the user is capable of operating these system's basic
+functions including but not limited to being able to power on the system, login and open
+either Internet Explorer or Mozilla Firefox, and navigate the browser to the address of
+this BECS website.
+Provider:
+We have assumed that the BECS will be running on a properly working web server and
+database system with an Internet connection that allows this system to perform all
+communications with clients.
+Assumptions:
+¥ There is no need for anyone to be able to order more than a single copy of a book
+(or any item) in a single transaction.
+¥ The manager accountÕs username and password maybe hard coded.
+¥ The manager cannot be a customer.
+¥ Any user cannot edit their account information.",0.03207595586348473,0.8445945945945946,0.06180469715698393,0.8056515455245972,0.8385354280471802,0.8217646479606628
+25,15.0,"Manager Functions - None Class Functions - None Class This class contains a list of items and all the functions that are required to be acted on those items. The functions AddItem(), SetPrice(), and SetReorder() are only accessible by the Manager. PurchaseItem() only by a Shopping Cart. Browse() can be accessed by any User. Public: No The purpose of this diagram is to show how objects within the BECS system will interact with each other in order to achieve the functionality required by the Use Case diagram. Below is a list of what you will see in the diagram itself as well as the class descriptions that follow. Classes Rectangles in the diagram that are split into three parts. The top section is the name of the class, the middle section is the list of variables that are stored in the class and the bottom section is the list of functions in the class. These rectangles represent objects within the system. Variables These have a name followed by a semicolon and then a type. The type denotes what kind of data can be stored in the variable. Functions Customer Functions - None Class Variables - None Manager Functions - None","1. Restrictions
+1.1. User Side
+1.1.1. Software
+1.1.1.1. Internet Explorer or Mozilla Firefox
+1.1.2. Hardware
+1.1.2.1. Computer Science Department Laboratory Terminal
+1.2. System Side
+1.2.1. Software
+1.2.1.1. Web-based application
+1.2.1.2. Database information storage system
+2. Data Structure
+2.1. Book has these attributes
+2.1.1. Unique ID (auto-increment starting at 1)
+2.1.2. Title
+2.1.3. Author
+2.1.4. Price
+2.1.5. Reorder Threshold
+2.1.6. Stop-order Boolean value
+2.1.7. Stock
+2.2. Customer has these attributes
+2.2.1. Unique Username
+2.2.2. Password
+2.2.3. Name
+2.2.4. Email Address
+2.2.5. Postal Address
+2.2.6. Member/Not Member Boolean value
+2.3. Manager has these attributes
+2.3.1. Username
+2.3.2. Password
+2.3.3. Email address
+2.4. Order log entries have these attributes:
+2.4.1. Unique ID (auto generated)
+Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have
+been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu)
+2.4.2. Time transaction took place
+2.4.3. Date transaction took place
+2.4.4. Username of customer
+2.4.5. Listing of the contents in customerÕs shopping cart
+3. System
+3.1. Browse Inventory
+3.1.1. Organization
+3.1.1.1. Items Listed on single page
+3.1.1.2. Items shown in tabular format
+3.1.1.3. Each Item listing contains
+3.1.1.3.1. Title
+3.1.1.3.2. Name of Author
+3.1.1.3.3. Price
+3.1.1.4. Listing sorted by Ascending item Title
+3.1.1.5. No individual Item pages
+3.1.2. Interaction
+3.1.2.1. Each Item has checkbox to mark selection
+3.1.2.2. Single button to add all selected items to Shopping Cart
+3.2. Search Inventory
+3.2.1. Search available only by Title of book
+3.2.2. Search is exact-match only
+3.3. Create, Update and Destroy (CRUD) Functionality
+3.3.1. Only managers are allowed to modify inventory
+3.3.2. Managers have an interface to:
+3.3.2.1. Create a book entry
+3.3.2.2. Update a book entry
+3.3.2.3. Update the stock/quantity of a particular book
+3.3.2.4. Create a new promotion
+3.3.2.5. Review current inventory
+3.3.2.5.1. Using the same interface to browse inventory as described in
+section 3.1, the manager has an additional ÒEdit ItemÓ option for each
+book.
+3.3.2.5.1.1. Manager has full CRUD capabilities on each book.
+3.3.3. Managers may delete items from the inventory
+3.4. Shopping Cart
+3.4.1. Logged In
+3.4.1.1. Can add items to cart
+3.4.1.1.1. If Item is not in stock, message displayed informing user to try
+again later
+3.4.1.1.2. Customer can only purchase one of each item (no quantities
+associated with orders)
+3.4.1.1.3.
+3.4.1.2. If shopping cart not empty, a user may begin Checkout procedure
+3.4.2. Not Logged In
+3.4.2.1. Can add items to cart
+3.4.2.2. User required to login before they may begin Checkout procedure
+3.5. Checkout procedure
+3.5.1. User must successfully use shopping cart before beginning this procedure
+3.5.2. Checkout page consists of
+3.5.2.1. A text box for promotion entering
+3.5.2.2. An overview of the purchase
+Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have
+been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu)
+3.5.2.3. A text box to hold the credit card number
+3.5.2.4. A button to complete the order
+3.5.3. Order details sent via email after the checkout has completed
+3.5.4. On order completion the inventory is decremented based on items purchased by
+user
+3.6. Authentication System
+3.6.1. User Levels
+3.6.1.1. Manager (single, hardcoded user, no orders)
+3.6.1.2. Customer (unlimited, open creation, unlimited orders)
+3.6.2. Account Creation
+3.6.2.1. Everyone is allowed to create an account
+3.6.2.2. Required Information
+3.6.2.2.1. Listed in section 2.2
+3.6.3. Account Modification
+3.6.3.1. Users are not able to modify any aspect of their account after creation
+(Òit would be nice but not neededÓ)
+3.6.4. Login and Logout
+3.6.4.1. There is no lost-password recovery
+3.6.4.2. Logging in allows one to logout
+3.6.4.3. Logging in allows checkout
+3.6.4.4. There is a 30-minute session time out after which a logged in user will be
+logged out automatically.
+3.7. Promotions
+3.7.1. Specifications
+3.7.1.1. Applies to entire order
+3.7.1.2. Percentage-off type promotion (x% off entire order)
+3.7.1.3. Expiration occurs at manager specified date
+3.7.1.4. Multiple coupons cannot be applied to same order
+3.7.1.5. Non-member users cannot apply promotions to order
+3.7.2. Creation
+3.7.2.1. Promotion created by manager
+3.7.2.2. Each promotion has a unique identifying number (can be auto generated)
+3.7.2.3. Email containing promotion sent to all member users of the BECS
+system
+3.7.2.4.
+3.7.3. Deletion
+3.7.3.1. Promotions are auto-deleted when the expiration date has passed
+3.8. Automated Reorder
+3.8.1. Specifications
+3.8.1.1. Manager sets reorder threshold on a per-item basis
+3.8.1.2. If item reaches the reorder threshold, an email is sent informing the
+manager of the itemÕs status and the system automatically reorders the item
+3.8.1.2.1. If the item has a stop-order applied to it, it will not automatically
+reorder until the manager removes it.
+3.8.1.3. A manager may increase the stock of an item using the managerÕs
+account
+3.9. Order Logging
+3.9.1. Specifications
+3.9.1.1. Required Information:
+3.9.1.1.1. Listed in section 2.4
+3.9.1.2. A manager can view all past transactions from all users
+Template based on IEEE Std 830-1998 for SRS. Modifications (content and ordering of information) have
+been made by Betty H.C. Cheng, Michigan State University (chengb at chengb.cse.msu.edu)
+Order log entries are generated when a user successfully checks out their shopping cart",0.5743589743589743,0.096137339055794,0.16470588235294117,0.7962804436683655,0.7632790803909302,0.7794305682182312
+26,15.0,"Customer: Mr. Borzoo Bonakdarpour Instructor: Prof. Betty H.C. Cheng 1 Introduction The Software Requirements Specification is designed to document and describe the agreement between the customer and the developer regarding the specification of the software product requested [5]. Its primary purpose is to provide a clear and descriptive ÛÏstatement of user requirementsÛ [5] that can be used as a reference in further development of the software system. This document is broken into a number of sections used to logically separate the software requirements into easily referenced parts. This Software Requirements Specification aims to describe the Functionality, External Interfaces, Attributes and Design Constraints [4] imposed on Implementation of the software system described throughout the rest of the document. Throughout the description of the software system, the language and terminology used should unambiguous and consistent throughout the document. 1.1 Purpose The information related to a customer's purchase that is logged User The person who operate the software product. 1.4 Organization This Software Requirements Specification document is divided in to multiple subsections. The first section includes explanations of the Purpose, Scope and Organization of the document. The first section also handles the description of project- specific words, acronyms and abbreviations that will be used in the document. The second section of the document is separated into the following five different sections, each detailing specific details of system uses and their corresponding actions: Product Perspective, Product Functions, User Characteristics, Constraints, Assumptions and Dependencies, Apportioning of Requirements. The third section is an enumerated listing of all of the requirements described for this system. The fourth section encompasses all of the Use-case, Sequence, State and Class diagrams that model the system. In the fifth section there exists a Prototype of the system along with a sample scenario that graphically describes the use of the system. The sixth section contains a listing of all related reference materials used in this document. The seventh and final subsection is dedicated to providing a point of contact for any viewer of this document. 2 Overall Description An object that lists a Customer's selected Items, their applied promotions and gives them an option to check out SRS Software Requirements Specification Stock The quantity of any particular item the inventory has on hand Text Box The typical BECS user is simply anyone that has access to the Internet and a web browser in the computer science department at Michigan State University. It is assumed that the user is familiar enough with a computer to operate the browser, keyboard and mouse and is capable of browsing to, from and within simple websites [1]. 2.4 Constraints As stated by the customer, security is not a concern for this system. The database may store passwords in plain text and there doesn't need to be a password recovery feature nor lockout after numerous invalid login attempts. As such, the system may not work correctly in cases when security is a concern. These cases include those listed above in addition to lack of an encrypted connection when sending credit card information and forcing users to use ÛÏstrongÛ passwords. A strong password is a password that meets a number of conditions that are set in place so that user's passwords cannot be easily guessed by an attacker. Generally, these rules include ensuring that the password contains a sufficient number of characters and contains not only lowercase letters but also capitals, numbers, and in some cases, symbols. The system may not behave correctly when used with Internet browsers other than Firefox and Internet Explorer. SCR ""Software Cost Reduction (SCR) is a set of techniques for designing software systems developed by David Parnas and researchers from the U.S. Naval Research Laboratory beginning in the late 1970s."" [7] Mode Class As stated by the customer, security is not a concern for this system. The database may store passwords in plain text and there doesn't need to be a password recovery feature nor lockout after numerous invalid login attempts. As such, the system may not work correctly in cases when security is a concern. These cases include those listed above in addition to lack of an encrypted connection when sending credit card information and forcing users to use ÛÏstrongÛ passwords. A strong password is a password that meets a number of conditions that are set in place so that user's passwords cannot be easily guessed by an attacker. Generally, these rules include ensuring that the password contains a sufficient number of characters and contains not only lowercase letters but also capitals, numbers, and in some cases, symbols. The system may not behave correctly when used with Internet browsers other than Firefox and Internet Explorer. SCR ""Software Cost Reduction (SCR) is a set of techniques for designing software systems developed by David Parnas and researchers from the U.S. Naval Research Laboratory beginning in the late 1970s."" [7] Mode Class ""A mode class is a finite state machine, with states called system modes"" [8] System State",,0.0,0.0,0.0,0.0,0.0,0.0
+27,15.0,"The quantity of any particular item the inventory has on hand Text Box A user interface element that allows a User to input text to the system Transaction The information related to a customer's purchase that is logged User Software Requirements Specification Stock The quantity of any particular item the inventory has on hand Text Box A user interface element that allows a User to input text to the system Transaction Generalization: User Variables - None Manager An instance of an Item that has these additional attributes: Title, Author Button A user interface element that allows a User to click and inform the system to take an action Checkbox A user interface element that allows a User to inform the system that he/she selected a particular item Checkout A user interface element that allows a User to input text to the system Transaction The information related to a customer's purchase that is logged User The person who operate the software product. 1.4 Organization","User Characteristics
+The typical BECS user is simply anyone that has access to the Internet and a web browser
+in the computer science department at Michigan State University. It is assumed that the
+user is familiar enough with a computer to operate the browser, keyboard and mouse and
+is capable of browsing to, from and within simple websites [1].",0.13253012048192772,0.3728813559322034,0.19555555555555557,0.7718628644943237,0.8083361983299255,0.7896786332130432
+28,,,,0.0,0.0,0.0,0.0,0.0,0.0
+29,,,,0.0,0.0,0.0,0.0,0.0,0.0
+30,,,,0.0,0.0,0.0,0.0,0.0,0.0
+31,,,,0.0,0.0,0.0,0.0,0.0,0.0
+32,,,,0.0,0.0,0.0,0.0,0.0,0.0
+33,,,,0.0,0.0,0.0,0.0,0.0,0.0
+34,,,,0.0,0.0,0.0,0.0,0.0,0.0
+35,,,,0.0,0.0,0.0,0.0,0.0,0.0
+36,,,,0.0,0.0,0.0,0.0,0.0,0.0
+37,,,,0.0,0.0,0.0,0.0,0.0,0.0
+38,,,,0.0,0.0,0.0,0.0,0.0,0.0
+39,,,,0.0,0.0,0.0,0.0,0.0,0.0
+40,,,,0.0,0.0,0.0,0.0,0.0,0.0
+41,,,,0.0,0.0,0.0,0.0,0.0,0.0
+42,,,,0.0,0.0,0.0,0.0,0.0,0.0
+43,,,,0.0,0.0,0.0,0.0,0.0,0.0
+44,,,,0.0,0.0,0.0,0.0,0.0,0.0
+45,,,,0.0,0.0,0.0,0.0,0.0,0.0
+46,,,,0.0,0.0,0.0,0.0,0.0,0.0
+47,,,,0.0,0.0,0.0,0.0,0.0,0.0
+48,,,,0.0,0.0,0.0,0.0,0.0,0.0
+49,,,,0.0,0.0,0.0,0.0,0.0,0.0
+50,,,,0.0,0.0,0.0,0.0,0.0,0.0
+51,,,,0.0,0.0,0.0,0.0,0.0,0.0
+52,,,,0.0,0.0,0.0,0.0,0.0,0.0
+53,,,,0.0,0.0,0.0,0.0,0.0,0.0
+54,,,,0.0,0.0,0.0,0.0,0.0,0.0
+55,,,,0.0,0.0,0.0,0.0,0.0,0.0
+56,,,,0.0,0.0,0.0,0.0,0.0,0.0
+57,,,,0.0,0.0,0.0,0.0,0.0,0.0
+58,,,,0.0,0.0,0.0,0.0,0.0,0.0
+59,,,,0.0,0.0,0.0,0.0,0.0,0.0
+60,,,,0.0,0.0,0.0,0.0,0.0,0.0
+61,,,,0.0,0.0,0.0,0.0,0.0,0.0
+62,,,,0.0,0.0,0.0,0.0,0.0,0.0
+63,,,,0.0,0.0,0.0,0.0,0.0,0.0
+64,,,,0.0,0.0,0.0,0.0,0.0,0.0
+65,,,,0.0,0.0,0.0,0.0,0.0,0.0
+66,,,,0.0,0.0,0.0,0.0,0.0,0.0
+67,,,,0.0,0.0,0.0,0.0,0.0,0.0
+68,,,,0.0,0.0,0.0,0.0,0.0,0.0
+69,,,,0.0,0.0,0.0,0.0,0.0,0.0
+70,,,,0.0,0.0,0.0,0.0,0.0,0.0
+71,,,,0.0,0.0,0.0,0.0,0.0,0.0
+72,,,,0.0,0.0,0.0,0.0,0.0,0.0
+73,,,,0.0,0.0,0.0,0.0,0.0,0.0
+74,,,,0.0,0.0,0.0,0.0,0.0,0.0
+75,,,,0.0,0.0,0.0,0.0,0.0,0.0
+76,,,,0.0,0.0,0.0,0.0,0.0,0.0
+77,,,,0.0,0.0,0.0,0.0,0.0,0.0
+78,,,,0.0,0.0,0.0,0.0,0.0,0.0
+79,,,,0.0,0.0,0.0,0.0,0.0,0.0
+80,,,,0.0,0.0,0.0,0.0,0.0,0.0
+81,,,,0.0,0.0,0.0,0.0,0.0,0.0
+82,,,,0.0,0.0,0.0,0.0,0.0,0.0
+83,,,,0.0,0.0,0.0,0.0,0.0,0.0
+84,,,,0.0,0.0,0.0,0.0,0.0,0.0
+85,,,,0.0,0.0,0.0,0.0,0.0,0.0
+86,,,,0.0,0.0,0.0,0.0,0.0,0.0
+87,,,,0.0,0.0,0.0,0.0,0.0,0.0
+88,,,,0.0,0.0,0.0,0.0,0.0,0.0
+89,,,,0.0,0.0,0.0,0.0,0.0,0.0
+90,,,,0.0,0.0,0.0,0.0,0.0,0.0
+91,,,,0.0,0.0,0.0,0.0,0.0,0.0
+92,,,,0.0,0.0,0.0,0.0,0.0,0.0
+93,,,,0.0,0.0,0.0,0.0,0.0,0.0
+94,,,,0.0,0.0,0.0,0.0,0.0,0.0
+95,,,,0.0,0.0,0.0,0.0,0.0,0.0
+96,,,,0.0,0.0,0.0,0.0,0.0,0.0
+97,,,,0.0,0.0,0.0,0.0,0.0,0.0
+98,,,,0.0,0.0,0.0,0.0,0.0,0.0
+99,,,,0.0,0.0,0.0,0.0,0.0,0.0
+100,,,,0.0,0.0,0.0,0.0,0.0,0.0
+101,,,,0.0,0.0,0.0,0.0,0.0,0.0
+102,,,,0.0,0.0,0.0,0.0,0.0,0.0
+103,,,,0.0,0.0,0.0,0.0,0.0,0.0
+104,,,,0.0,0.0,0.0,0.0,0.0,0.0
+105,,,,0.0,0.0,0.0,0.0,0.0,0.0
+106,,,,0.0,0.0,0.0,0.0,0.0,0.0
+107,,,,0.0,0.0,0.0,0.0,0.0,0.0
+108,,,,0.0,0.0,0.0,0.0,0.0,0.0
+109,,,,0.0,0.0,0.0,0.0,0.0,0.0
+110,,,,0.0,0.0,0.0,0.0,0.0,0.0
+111,,,,0.0,0.0,0.0,0.0,0.0,0.0
+112,,,,0.0,0.0,0.0,0.0,0.0,0.0
+113,,,,0.0,0.0,0.0,0.0,0.0,0.0
+114,,,,0.0,0.0,0.0,0.0,0.0,0.0
+115,,,,0.0,0.0,0.0,0.0,0.0,0.0
+116,,,,0.0,0.0,0.0,0.0,0.0,0.0
+117,,,,0.0,0.0,0.0,0.0,0.0,0.0
+118,,,,0.0,0.0,0.0,0.0,0.0,0.0
+119,,,,0.0,0.0,0.0,0.0,0.0,0.0
+120,,,,0.0,0.0,0.0,0.0,0.0,0.0
+121,,,,0.0,0.0,0.0,0.0,0.0,0.0
+122,,,,0.0,0.0,0.0,0.0,0.0,0.0
+123,,,,0.0,0.0,0.0,0.0,0.0,0.0
+124,,,,0.0,0.0,0.0,0.0,0.0,0.0
+125,,,,0.0,0.0,0.0,0.0,0.0,0.0
+126,,,,0.0,0.0,0.0,0.0,0.0,0.0
+127,,,,0.0,0.0,0.0,0.0,0.0,0.0
+128,,,,0.0,0.0,0.0,0.0,0.0,0.0
+129,,,,0.0,0.0,0.0,0.0,0.0,0.0
+130,,,,0.0,0.0,0.0,0.0,0.0,0.0
+131,,,,0.0,0.0,0.0,0.0,0.0,0.0
+132,,,,0.0,0.0,0.0,0.0,0.0,0.0
+133,,,,0.0,0.0,0.0,0.0,0.0,0.0
+134,,,,0.0,0.0,0.0,0.0,0.0,0.0
+135,,,,0.0,0.0,0.0,0.0,0.0,0.0
+136,,,,0.0,0.0,0.0,0.0,0.0,0.0
+137,,,,0.0,0.0,0.0,0.0,0.0,0.0
+138,,,,0.0,0.0,0.0,0.0,0.0,0.0
+139,,,,0.0,0.0,0.0,0.0,0.0,0.0
+140,,,,0.0,0.0,0.0,0.0,0.0,0.0
+141,,,,0.0,0.0,0.0,0.0,0.0,0.0
+142,,,,0.0,0.0,0.0,0.0,0.0,0.0
+143,,,,0.0,0.0,0.0,0.0,0.0,0.0
+144,,,,0.0,0.0,0.0,0.0,0.0,0.0
+145,,,,0.0,0.0,0.0,0.0,0.0,0.0
+146,,,,0.0,0.0,0.0,0.0,0.0,0.0
+147,,,,0.0,0.0,0.0,0.0,0.0,0.0
+148,,,,0.0,0.0,0.0,0.0,0.0,0.0
+149,,,,0.0,0.0,0.0,0.0,0.0,0.0
+150,,,,0.0,0.0,0.0,0.0,0.0,0.0
+151,,,,0.0,0.0,0.0,0.0,0.0,0.0
+152,,,,0.0,0.0,0.0,0.0,0.0,0.0
+153,,,,0.0,0.0,0.0,0.0,0.0,0.0
+154,,,,0.0,0.0,0.0,0.0,0.0,0.0
+155,,,,0.0,0.0,0.0,0.0,0.0,0.0
+156,,,,0.0,0.0,0.0,0.0,0.0,0.0
+157,,,,0.0,0.0,0.0,0.0,0.0,0.0
+158,,,,0.0,0.0,0.0,0.0,0.0,0.0
+159,,,,0.0,0.0,0.0,0.0,0.0,0.0
+160,,,,0.0,0.0,0.0,0.0,0.0,0.0
+161,,,,0.0,0.0,0.0,0.0,0.0,0.0
+162,,,,0.0,0.0,0.0,0.0,0.0,0.0
+163,,,,0.0,0.0,0.0,0.0,0.0,0.0
+164,,,,0.0,0.0,0.0,0.0,0.0,0.0
+165,,,,0.0,0.0,0.0,0.0,0.0,0.0
+166,,,,0.0,0.0,0.0,0.0,0.0,0.0
+167,,,,0.0,0.0,0.0,0.0,0.0,0.0
+168,,,,0.0,0.0,0.0,0.0,0.0,0.0
+169,,,,0.0,0.0,0.0,0.0,0.0,0.0
+170,,,,0.0,0.0,0.0,0.0,0.0,0.0
+171,,,,0.0,0.0,0.0,0.0,0.0,0.0
+172,,,,0.0,0.0,0.0,0.0,0.0,0.0
+173,,,,0.0,0.0,0.0,0.0,0.0,0.0
+174,,,,0.0,0.0,0.0,0.0,0.0,0.0
+175,,,,0.0,0.0,0.0,0.0,0.0,0.0
+176,,,,0.0,0.0,0.0,0.0,0.0,0.0
+177,,,,0.0,0.0,0.0,0.0,0.0,0.0
+178,,,,0.0,0.0,0.0,0.0,0.0,0.0
+179,,,,0.0,0.0,0.0,0.0,0.0,0.0
+180,,,,0.0,0.0,0.0,0.0,0.0,0.0
+181,,,,0.0,0.0,0.0,0.0,0.0,0.0
+182,,,,0.0,0.0,0.0,0.0,0.0,0.0
+183,,,,0.0,0.0,0.0,0.0,0.0,0.0
+184,,,,0.0,0.0,0.0,0.0,0.0,0.0
+185,,,,0.0,0.0,0.0,0.0,0.0,0.0
+186,,,,0.0,0.0,0.0,0.0,0.0,0.0
+187,,,,0.0,0.0,0.0,0.0,0.0,0.0
+188,,,,0.0,0.0,0.0,0.0,0.0,0.0
+189,,,,0.0,0.0,0.0,0.0,0.0,0.0
+190,,,,0.0,0.0,0.0,0.0,0.0,0.0
+191,,,,0.0,0.0,0.0,0.0,0.0,0.0
+192,,,,0.0,0.0,0.0,0.0,0.0,0.0
+193,,,,0.0,0.0,0.0,0.0,0.0,0.0
+194,,,,0.0,0.0,0.0,0.0,0.0,0.0
+195,,,,0.0,0.0,0.0,0.0,0.0,0.0
+196,,,,0.0,0.0,0.0,0.0,0.0,0.0
+197,,,,0.0,0.0,0.0,0.0,0.0,0.0
+198,,,,0.0,0.0,0.0,0.0,0.0,0.0
+199,,,,0.0,0.0,0.0,0.0,0.0,0.0
+200,,,,0.0,0.0,0.0,0.0,0.0,0.0
+201,,,,0.0,0.0,0.0,0.0,0.0,0.0
+202,,,,0.0,0.0,0.0,0.0,0.0,0.0
+203,,,,0.0,0.0,0.0,0.0,0.0,0.0
+204,,,,0.0,0.0,0.0,0.0,0.0,0.0
+205,,,,0.0,0.0,0.0,0.0,0.0,0.0
+206,,,,0.0,0.0,0.0,0.0,0.0,0.0
+207,,,,0.0,0.0,0.0,0.0,0.0,0.0
+208,,,,0.0,0.0,0.0,0.0,0.0,0.0
+209,,,,0.0,0.0,0.0,0.0,0.0,0.0
+210,,,,0.0,0.0,0.0,0.0,0.0,0.0
+211,,,,0.0,0.0,0.0,0.0,0.0,0.0
+212,,,,0.0,0.0,0.0,0.0,0.0,0.0
+213,,,,0.0,0.0,0.0,0.0,0.0,0.0
+214,,,,0.0,0.0,0.0,0.0,0.0,0.0
+215,,,,0.0,0.0,0.0,0.0,0.0,0.0
+216,,,,0.0,0.0,0.0,0.0,0.0,0.0
+217,,,,0.0,0.0,0.0,0.0,0.0,0.0
+218,,,,0.0,0.0,0.0,0.0,0.0,0.0
+219,,,,0.0,0.0,0.0,0.0,0.0,0.0
+220,,,,0.0,0.0,0.0,0.0,0.0,0.0
+221,,,,0.0,0.0,0.0,0.0,0.0,0.0
+222,,,,0.0,0.0,0.0,0.0,0.0,0.0
+223,,,,0.0,0.0,0.0,0.0,0.0,0.0
+224,,,,0.0,0.0,0.0,0.0,0.0,0.0
+225,,,,0.0,0.0,0.0,0.0,0.0,0.0
+226,,,,0.0,0.0,0.0,0.0,0.0,0.0
+227,,,,0.0,0.0,0.0,0.0,0.0,0.0
+228,,,,0.0,0.0,0.0,0.0,0.0,0.0
+229,,,,0.0,0.0,0.0,0.0,0.0,0.0
+230,,,,0.0,0.0,0.0,0.0,0.0,0.0
+231,,,,0.0,0.0,0.0,0.0,0.0,0.0
+232,,,,0.0,0.0,0.0,0.0,0.0,0.0
+233,,,,0.0,0.0,0.0,0.0,0.0,0.0
+234,,,,0.0,0.0,0.0,0.0,0.0,0.0
+235,,,,0.0,0.0,0.0,0.0,0.0,0.0
+236,,,,0.0,0.0,0.0,0.0,0.0,0.0
+237,,,,0.0,0.0,0.0,0.0,0.0,0.0
+238,,,,0.0,0.0,0.0,0.0,0.0,0.0
+239,,,,0.0,0.0,0.0,0.0,0.0,0.0
+240,,,,0.0,0.0,0.0,0.0,0.0,0.0
+241,,,,0.0,0.0,0.0,0.0,0.0,0.0
+242,,,,0.0,0.0,0.0,0.0,0.0,0.0
+243,,,,0.0,0.0,0.0,0.0,0.0,0.0
+244,,,,0.0,0.0,0.0,0.0,0.0,0.0
+245,,,,0.0,0.0,0.0,0.0,0.0,0.0
+246,,,,0.0,0.0,0.0,0.0,0.0,0.0
+247,,,,0.0,0.0,0.0,0.0,0.0,0.0
+248,,,,0.0,0.0,0.0,0.0,0.0,0.0
+249,,,,0.0,0.0,0.0,0.0,0.0,0.0
+250,,,,0.0,0.0,0.0,0.0,0.0,0.0
+251,,,,0.0,0.0,0.0,0.0,0.0,0.0
+252,,,,0.0,0.0,0.0,0.0,0.0,0.0
+253,,,,0.0,0.0,0.0,0.0,0.0,0.0
+254,,,,0.0,0.0,0.0,0.0,0.0,0.0
+255,,,,0.0,0.0,0.0,0.0,0.0,0.0
+256,,,,0.0,0.0,0.0,0.0,0.0,0.0
+257,,,,0.0,0.0,0.0,0.0,0.0,0.0
+258,,,,0.0,0.0,0.0,0.0,0.0,0.0
+259,,,,0.0,0.0,0.0,0.0,0.0,0.0
+260,,,,0.0,0.0,0.0,0.0,0.0,0.0
+261,,,,0.0,0.0,0.0,0.0,0.0,0.0
+262,,,,0.0,0.0,0.0,0.0,0.0,0.0
+263,,,,0.0,0.0,0.0,0.0,0.0,0.0
+264,,,,0.0,0.0,0.0,0.0,0.0,0.0
+265,,,,0.0,0.0,0.0,0.0,0.0,0.0
+266,,,,0.0,0.0,0.0,0.0,0.0,0.0
+267,,,,0.0,0.0,0.0,0.0,0.0,0.0
+268,,,,0.0,0.0,0.0,0.0,0.0,0.0
+269,,,,0.0,0.0,0.0,0.0,0.0,0.0
+270,,,,0.0,0.0,0.0,0.0,0.0,0.0
+271,,,,0.0,0.0,0.0,0.0,0.0,0.0
+272,,,,0.0,0.0,0.0,0.0,0.0,0.0
+273,,,,0.0,0.0,0.0,0.0,0.0,0.0
+274,,,,0.0,0.0,0.0,0.0,0.0,0.0
+275,,,,0.0,0.0,0.0,0.0,0.0,0.0
+276,,,,0.0,0.0,0.0,0.0,0.0,0.0
+277,,,,0.0,0.0,0.0,0.0,0.0,0.0
+278,,,,0.0,0.0,0.0,0.0,0.0,0.0
+279,,,,0.0,0.0,0.0,0.0,0.0,0.0
+280,,,,0.0,0.0,0.0,0.0,0.0,0.0
+281,,,,0.0,0.0,0.0,0.0,0.0,0.0
+282,,,,0.0,0.0,0.0,0.0,0.0,0.0
+283,,,,0.0,0.0,0.0,0.0,0.0,0.0
+284,,,,0.0,0.0,0.0,0.0,0.0,0.0
+285,,,,0.0,0.0,0.0,0.0,0.0,0.0
+286,,,,0.0,0.0,0.0,0.0,0.0,0.0
+287,,,,0.0,0.0,0.0,0.0,0.0,0.0
+288,,,,0.0,0.0,0.0,0.0,0.0,0.0
+289,,,,0.0,0.0,0.0,0.0,0.0,0.0
+290,,,,0.0,0.0,0.0,0.0,0.0,0.0
+291,,,,0.0,0.0,0.0,0.0,0.0,0.0
+292,,,,0.0,0.0,0.0,0.0,0.0,0.0
+293,,,,0.0,0.0,0.0,0.0,0.0,0.0
+294,,,,0.0,0.0,0.0,0.0,0.0,0.0
+295,,,,0.0,0.0,0.0,0.0,0.0,0.0
+296,,,,0.0,0.0,0.0,0.0,0.0,0.0
+297,,,,0.0,0.0,0.0,0.0,0.0,0.0
+298,,,,0.0,0.0,0.0,0.0,0.0,0.0
+299,,,,0.0,0.0,0.0,0.0,0.0,0.0
+300,,,,0.0,0.0,0.0,0.0,0.0,0.0
+301,,,,0.0,0.0,0.0,0.0,0.0,0.0
+302,,,,0.0,0.0,0.0,0.0,0.0,0.0
+303,,,,0.0,0.0,0.0,0.0,0.0,0.0
+304,,,,0.0,0.0,0.0,0.0,0.0,0.0
+305,,,,0.0,0.0,0.0,0.0,0.0,0.0
+306,,,,0.0,0.0,0.0,0.0,0.0,0.0
+307,,,,0.0,0.0,0.0,0.0,0.0,0.0
+308,,,,0.0,0.0,0.0,0.0,0.0,0.0
+309,,,,0.0,0.0,0.0,0.0,0.0,0.0
+310,,,,0.0,0.0,0.0,0.0,0.0,0.0
+311,,,,0.0,0.0,0.0,0.0,0.0,0.0
+312,,,,0.0,0.0,0.0,0.0,0.0,0.0
+313,,,,0.0,0.0,0.0,0.0,0.0,0.0
+314,,,,0.0,0.0,0.0,0.0,0.0,0.0
+315,,,,0.0,0.0,0.0,0.0,0.0,0.0
+316,,,,0.0,0.0,0.0,0.0,0.0,0.0
+317,,,,0.0,0.0,0.0,0.0,0.0,0.0
+318,,,,0.0,0.0,0.0,0.0,0.0,0.0
+319,,,,0.0,0.0,0.0,0.0,0.0,0.0
+320,,,,0.0,0.0,0.0,0.0,0.0,0.0
+321,,,,0.0,0.0,0.0,0.0,0.0,0.0
+322,,,,0.0,0.0,0.0,0.0,0.0,0.0
+323,,,,0.0,0.0,0.0,0.0,0.0,0.0
+324,,,,0.0,0.0,0.0,0.0,0.0,0.0
+325,,,,0.0,0.0,0.0,0.0,0.0,0.0
+326,,,,0.0,0.0,0.0,0.0,0.0,0.0
+327,,,,0.0,0.0,0.0,0.0,0.0,0.0
+328,,,,0.0,0.0,0.0,0.0,0.0,0.0
+329,,,,0.0,0.0,0.0,0.0,0.0,0.0
+330,,,,0.0,0.0,0.0,0.0,0.0,0.0
+331,,,,0.0,0.0,0.0,0.0,0.0,0.0
+332,,,,0.0,0.0,0.0,0.0,0.0,0.0
+333,,,,0.0,0.0,0.0,0.0,0.0,0.0
+334,,,,0.0,0.0,0.0,0.0,0.0,0.0
+335,,,,0.0,0.0,0.0,0.0,0.0,0.0
+336,,,,0.0,0.0,0.0,0.0,0.0,0.0
+337,,,,0.0,0.0,0.0,0.0,0.0,0.0
+338,,,,0.0,0.0,0.0,0.0,0.0,0.0
+339,,,,0.0,0.0,0.0,0.0,0.0,0.0
+340,,,,0.0,0.0,0.0,0.0,0.0,0.0
+341,,,,0.0,0.0,0.0,0.0,0.0,0.0
+342,,,,0.0,0.0,0.0,0.0,0.0,0.0
+343,,,,0.0,0.0,0.0,0.0,0.0,0.0
+344,,,,0.0,0.0,0.0,0.0,0.0,0.0
+345,,,,0.0,0.0,0.0,0.0,0.0,0.0
+346,,,,0.0,0.0,0.0,0.0,0.0,0.0
+347,,,,0.0,0.0,0.0,0.0,0.0,0.0
+348,,,,0.0,0.0,0.0,0.0,0.0,0.0
+349,,,,0.0,0.0,0.0,0.0,0.0,0.0
+350,,,,0.0,0.0,0.0,0.0,0.0,0.0
+351,,,,0.0,0.0,0.0,0.0,0.0,0.0
+352,,,,0.0,0.0,0.0,0.0,0.0,0.0
+353,,,,0.0,0.0,0.0,0.0,0.0,0.0
+354,,,,0.0,0.0,0.0,0.0,0.0,0.0
+355,,,,0.0,0.0,0.0,0.0,0.0,0.0
+356,,,,0.0,0.0,0.0,0.0,0.0,0.0
+357,,,,0.0,0.0,0.0,0.0,0.0,0.0
+358,,,,0.0,0.0,0.0,0.0,0.0,0.0
+359,,,,0.0,0.0,0.0,0.0,0.0,0.0
+360,,,,0.0,0.0,0.0,0.0,0.0,0.0
+361,,,,0.0,0.0,0.0,0.0,0.0,0.0
+362,,,,0.0,0.0,0.0,0.0,0.0,0.0
+363,,,,0.0,0.0,0.0,0.0,0.0,0.0
+364,,,,0.0,0.0,0.0,0.0,0.0,0.0
+365,,,,0.0,0.0,0.0,0.0,0.0,0.0
+366,,,,0.0,0.0,0.0,0.0,0.0,0.0
+367,,,,0.0,0.0,0.0,0.0,0.0,0.0
+368,,,,0.0,0.0,0.0,0.0,0.0,0.0
+369,,,,0.0,0.0,0.0,0.0,0.0,0.0
+370,,,,0.0,0.0,0.0,0.0,0.0,0.0
+371,,,,0.0,0.0,0.0,0.0,0.0,0.0
+372,,,,0.0,0.0,0.0,0.0,0.0,0.0
+373,,,,0.0,0.0,0.0,0.0,0.0,0.0
+374,,,,0.0,0.0,0.0,0.0,0.0,0.0
+375,,,,0.0,0.0,0.0,0.0,0.0,0.0
+376,,,,0.0,0.0,0.0,0.0,0.0,0.0
+377,,,,0.0,0.0,0.0,0.0,0.0,0.0
+378,,,,0.0,0.0,0.0,0.0,0.0,0.0
+379,,,,0.0,0.0,0.0,0.0,0.0,0.0
+380,,,,0.0,0.0,0.0,0.0,0.0,0.0
+381,,,,0.0,0.0,0.0,0.0,0.0,0.0
+382,,,,0.0,0.0,0.0,0.0,0.0,0.0
+383,,,,0.0,0.0,0.0,0.0,0.0,0.0
+384,,,,0.0,0.0,0.0,0.0,0.0,0.0
+385,,,,0.0,0.0,0.0,0.0,0.0,0.0
+386,,,,0.0,0.0,0.0,0.0,0.0,0.0
+387,,,,0.0,0.0,0.0,0.0,0.0,0.0
+388,,,,0.0,0.0,0.0,0.0,0.0,0.0
+389,,,,0.0,0.0,0.0,0.0,0.0,0.0
+390,,,,0.0,0.0,0.0,0.0,0.0,0.0
+391,,,,0.0,0.0,0.0,0.0,0.0,0.0
+392,,,,0.0,0.0,0.0,0.0,0.0,0.0
+393,,,,0.0,0.0,0.0,0.0,0.0,0.0
+394,,,,0.0,0.0,0.0,0.0,0.0,0.0
+395,,,,0.0,0.0,0.0,0.0,0.0,0.0
+396,,,,0.0,0.0,0.0,0.0,0.0,0.0
+397,,,,0.0,0.0,0.0,0.0,0.0,0.0
+398,,,,0.0,0.0,0.0,0.0,0.0,0.0
+399,,,,0.0,0.0,0.0,0.0,0.0,0.0
+400,,,,0.0,0.0,0.0,0.0,0.0,0.0
+401,,,,0.0,0.0,0.0,0.0,0.0,0.0
+402,,,,0.0,0.0,0.0,0.0,0.0,0.0
+403,,,,0.0,0.0,0.0,0.0,0.0,0.0
+404,,,,0.0,0.0,0.0,0.0,0.0,0.0
+405,,,,0.0,0.0,0.0,0.0,0.0,0.0
+406,,,,0.0,0.0,0.0,0.0,0.0,0.0
+407,,,,0.0,0.0,0.0,0.0,0.0,0.0
+408,,,,0.0,0.0,0.0,0.0,0.0,0.0
+409,,,,0.0,0.0,0.0,0.0,0.0,0.0
+410,,,,0.0,0.0,0.0,0.0,0.0,0.0
+411,,,,0.0,0.0,0.0,0.0,0.0,0.0
+412,,,,0.0,0.0,0.0,0.0,0.0,0.0
+413,,,,0.0,0.0,0.0,0.0,0.0,0.0
+414,,,,0.0,0.0,0.0,0.0,0.0,0.0
+415,,,,0.0,0.0,0.0,0.0,0.0,0.0
+416,,,,0.0,0.0,0.0,0.0,0.0,0.0
+417,,,,0.0,0.0,0.0,0.0,0.0,0.0
+418,,,,0.0,0.0,0.0,0.0,0.0,0.0
+419,,,,0.0,0.0,0.0,0.0,0.0,0.0
+420,,,,0.0,0.0,0.0,0.0,0.0,0.0
+421,,,,0.0,0.0,0.0,0.0,0.0,0.0
+422,,,,0.0,0.0,0.0,0.0,0.0,0.0
+423,,,,0.0,0.0,0.0,0.0,0.0,0.0
+424,,,,0.0,0.0,0.0,0.0,0.0,0.0
+425,,,,0.0,0.0,0.0,0.0,0.0,0.0
+426,,,,0.0,0.0,0.0,0.0,0.0,0.0
+427,,,,0.0,0.0,0.0,0.0,0.0,0.0
+428,,,,0.0,0.0,0.0,0.0,0.0,0.0
+429,,,,0.0,0.0,0.0,0.0,0.0,0.0
+430,,,,0.0,0.0,0.0,0.0,0.0,0.0
+431,,,,0.0,0.0,0.0,0.0,0.0,0.0
+432,,,,0.0,0.0,0.0,0.0,0.0,0.0
+433,,,,0.0,0.0,0.0,0.0,0.0,0.0
+434,,,,0.0,0.0,0.0,0.0,0.0,0.0
+435,,,,0.0,0.0,0.0,0.0,0.0,0.0
+436,,,,0.0,0.0,0.0,0.0,0.0,0.0
+437,,,,0.0,0.0,0.0,0.0,0.0,0.0
+438,,,,0.0,0.0,0.0,0.0,0.0,0.0
+439,,,,0.0,0.0,0.0,0.0,0.0,0.0
+440,,,,0.0,0.0,0.0,0.0,0.0,0.0
+441,,,,0.0,0.0,0.0,0.0,0.0,0.0
+442,,,,0.0,0.0,0.0,0.0,0.0,0.0
+443,,,,0.0,0.0,0.0,0.0,0.0,0.0
+444,,,,0.0,0.0,0.0,0.0,0.0,0.0
+445,,,,0.0,0.0,0.0,0.0,0.0,0.0
+446,,,,0.0,0.0,0.0,0.0,0.0,0.0
+447,,,,0.0,0.0,0.0,0.0,0.0,0.0
+448,,,,0.0,0.0,0.0,0.0,0.0,0.0
+449,,,,0.0,0.0,0.0,0.0,0.0,0.0
+450,,,,0.0,0.0,0.0,0.0,0.0,0.0
+451,,,,0.0,0.0,0.0,0.0,0.0,0.0
+452,,,,0.0,0.0,0.0,0.0,0.0,0.0
+453,,,,0.0,0.0,0.0,0.0,0.0,0.0
+454,,,,0.0,0.0,0.0,0.0,0.0,0.0
+455,,,,0.0,0.0,0.0,0.0,0.0,0.0
+456,,,,0.0,0.0,0.0,0.0,0.0,0.0
+457,,,,0.0,0.0,0.0,0.0,0.0,0.0
+458,,,,0.0,0.0,0.0,0.0,0.0,0.0
+459,,,,0.0,0.0,0.0,0.0,0.0,0.0
+460,,,,0.0,0.0,0.0,0.0,0.0,0.0
+461,,,,0.0,0.0,0.0,0.0,0.0,0.0
+462,,,,0.0,0.0,0.0,0.0,0.0,0.0
+463,,,,0.0,0.0,0.0,0.0,0.0,0.0
+464,,,,0.0,0.0,0.0,0.0,0.0,0.0
+465,,,,0.0,0.0,0.0,0.0,0.0,0.0
+466,,,,0.0,0.0,0.0,0.0,0.0,0.0
+467,,,,0.0,0.0,0.0,0.0,0.0,0.0
+468,,,,0.0,0.0,0.0,0.0,0.0,0.0
+469,,,,0.0,0.0,0.0,0.0,0.0,0.0
+470,,,,0.0,0.0,0.0,0.0,0.0,0.0
+471,,,,0.0,0.0,0.0,0.0,0.0,0.0
+472,,,,0.0,0.0,0.0,0.0,0.0,0.0
+473,,,,0.0,0.0,0.0,0.0,0.0,0.0
+474,,,,0.0,0.0,0.0,0.0,0.0,0.0
+475,,,,0.0,0.0,0.0,0.0,0.0,0.0
+476,,,,0.0,0.0,0.0,0.0,0.0,0.0
+477,,,,0.0,0.0,0.0,0.0,0.0,0.0
+478,,,,0.0,0.0,0.0,0.0,0.0,0.0
+479,,,,0.0,0.0,0.0,0.0,0.0,0.0
+480,,,,0.0,0.0,0.0,0.0,0.0,0.0
+481,,,,0.0,0.0,0.0,0.0,0.0,0.0
+482,,,,0.0,0.0,0.0,0.0,0.0,0.0
+483,,,,0.0,0.0,0.0,0.0,0.0,0.0
+484,,,,0.0,0.0,0.0,0.0,0.0,0.0
+485,,,,0.0,0.0,0.0,0.0,0.0,0.0
+486,,,,0.0,0.0,0.0,0.0,0.0,0.0
+487,,,,0.0,0.0,0.0,0.0,0.0,0.0
+488,,,,0.0,0.0,0.0,0.0,0.0,0.0
+489,,,,0.0,0.0,0.0,0.0,0.0,0.0
+490,,,,0.0,0.0,0.0,0.0,0.0,0.0
+491,,,,0.0,0.0,0.0,0.0,0.0,0.0
+492,,,,0.0,0.0,0.0,0.0,0.0,0.0
+493,,,,0.0,0.0,0.0,0.0,0.0,0.0
+494,,,,0.0,0.0,0.0,0.0,0.0,0.0
+495,,,,0.0,0.0,0.0,0.0,0.0,0.0
+496,,,,0.0,0.0,0.0,0.0,0.0,0.0
+497,,,,0.0,0.0,0.0,0.0,0.0,0.0
+498,,,,0.0,0.0,0.0,0.0,0.0,0.0
+499,,,,0.0,0.0,0.0,0.0,0.0,0.0
+500,,,,0.0,0.0,0.0,0.0,0.0,0.0
+501,,,,0.0,0.0,0.0,0.0,0.0,0.0
+502,,,,0.0,0.0,0.0,0.0,0.0,0.0
+503,,,,0.0,0.0,0.0,0.0,0.0,0.0
+504,,,,0.0,0.0,0.0,0.0,0.0,0.0
+505,,,,0.0,0.0,0.0,0.0,0.0,0.0
+506,,,,0.0,0.0,0.0,0.0,0.0,0.0
+507,,,,0.0,0.0,0.0,0.0,0.0,0.0
+508,,,,0.0,0.0,0.0,0.0,0.0,0.0
+509,,,,0.0,0.0,0.0,0.0,0.0,0.0
+510,,,,0.0,0.0,0.0,0.0,0.0,0.0
+511,,,,0.0,0.0,0.0,0.0,0.0,0.0
+512,,,,0.0,0.0,0.0,0.0,0.0,0.0
+513,,,,0.0,0.0,0.0,0.0,0.0,0.0
+514,,,,0.0,0.0,0.0,0.0,0.0,0.0
+515,,,,0.0,0.0,0.0,0.0,0.0,0.0
+516,,,,0.0,0.0,0.0,0.0,0.0,0.0
+517,,,,0.0,0.0,0.0,0.0,0.0,0.0
+518,,,,0.0,0.0,0.0,0.0,0.0,0.0
+519,,,,0.0,0.0,0.0,0.0,0.0,0.0
+520,,,,0.0,0.0,0.0,0.0,0.0,0.0
+521,,,,0.0,0.0,0.0,0.0,0.0,0.0
+522,,,,0.0,0.0,0.0,0.0,0.0,0.0
+523,,,,0.0,0.0,0.0,0.0,0.0,0.0
+524,,,,0.0,0.0,0.0,0.0,0.0,0.0
+525,,,,0.0,0.0,0.0,0.0,0.0,0.0
+526,,,,0.0,0.0,0.0,0.0,0.0,0.0
+527,,,,0.0,0.0,0.0,0.0,0.0,0.0
+528,,,,0.0,0.0,0.0,0.0,0.0,0.0
+529,,,,0.0,0.0,0.0,0.0,0.0,0.0
+530,,,,0.0,0.0,0.0,0.0,0.0,0.0
+531,,,,0.0,0.0,0.0,0.0,0.0,0.0
+532,,,,0.0,0.0,0.0,0.0,0.0,0.0
+533,,,,0.0,0.0,0.0,0.0,0.0,0.0
+534,,,,0.0,0.0,0.0,0.0,0.0,0.0
+535,,,,0.0,0.0,0.0,0.0,0.0,0.0
+536,,,,0.0,0.0,0.0,0.0,0.0,0.0
+537,,,,0.0,0.0,0.0,0.0,0.0,0.0
+538,,,,0.0,0.0,0.0,0.0,0.0,0.0
+539,,,,0.0,0.0,0.0,0.0,0.0,0.0
+540,,,,0.0,0.0,0.0,0.0,0.0,0.0
+541,,,,0.0,0.0,0.0,0.0,0.0,0.0
+542,,,,0.0,0.0,0.0,0.0,0.0,0.0
+543,,,,0.0,0.0,0.0,0.0,0.0,0.0
+544,,,,0.0,0.0,0.0,0.0,0.0,0.0
+545,,,,0.0,0.0,0.0,0.0,0.0,0.0
+546,,,,0.0,0.0,0.0,0.0,0.0,0.0
+547,,,,0.0,0.0,0.0,0.0,0.0,0.0
+548,,,,0.0,0.0,0.0,0.0,0.0,0.0
+549,,,,0.0,0.0,0.0,0.0,0.0,0.0
+550,,,,0.0,0.0,0.0,0.0,0.0,0.0
+551,,,,0.0,0.0,0.0,0.0,0.0,0.0
+552,,,,0.0,0.0,0.0,0.0,0.0,0.0
+553,,,,0.0,0.0,0.0,0.0,0.0,0.0
+554,,,,0.0,0.0,0.0,0.0,0.0,0.0
+555,,,,0.0,0.0,0.0,0.0,0.0,0.0
+556,,,,0.0,0.0,0.0,0.0,0.0,0.0
+557,,,,0.0,0.0,0.0,0.0,0.0,0.0
+558,,,,0.0,0.0,0.0,0.0,0.0,0.0
+559,,,,0.0,0.0,0.0,0.0,0.0,0.0
+560,,,,0.0,0.0,0.0,0.0,0.0,0.0
+561,,,,0.0,0.0,0.0,0.0,0.0,0.0
+562,,,,0.0,0.0,0.0,0.0,0.0,0.0
+563,,,,0.0,0.0,0.0,0.0,0.0,0.0
+564,,,,0.0,0.0,0.0,0.0,0.0,0.0
+565,,,,0.0,0.0,0.0,0.0,0.0,0.0
+566,,,,0.0,0.0,0.0,0.0,0.0,0.0
+567,,,,0.0,0.0,0.0,0.0,0.0,0.0
+568,,,,0.0,0.0,0.0,0.0,0.0,0.0
+569,,,,0.0,0.0,0.0,0.0,0.0,0.0
+570,,,,0.0,0.0,0.0,0.0,0.0,0.0
+571,,,,0.0,0.0,0.0,0.0,0.0,0.0
+572,,,,0.0,0.0,0.0,0.0,0.0,0.0
+573,,,,0.0,0.0,0.0,0.0,0.0,0.0
+574,,,,0.0,0.0,0.0,0.0,0.0,0.0
+575,,,,0.0,0.0,0.0,0.0,0.0,0.0
+576,,,,0.0,0.0,0.0,0.0,0.0,0.0
+577,,,,0.0,0.0,0.0,0.0,0.0,0.0
+578,,,,0.0,0.0,0.0,0.0,0.0,0.0
+579,,,,0.0,0.0,0.0,0.0,0.0,0.0
+580,,,,0.0,0.0,0.0,0.0,0.0,0.0
+581,,,,0.0,0.0,0.0,0.0,0.0,0.0
+582,,,,0.0,0.0,0.0,0.0,0.0,0.0
+583,,,,0.0,0.0,0.0,0.0,0.0,0.0
+584,,,,0.0,0.0,0.0,0.0,0.0,0.0
+585,,,,0.0,0.0,0.0,0.0,0.0,0.0
+586,,,,0.0,0.0,0.0,0.0,0.0,0.0
+587,,,,0.0,0.0,0.0,0.0,0.0,0.0
+588,,,,0.0,0.0,0.0,0.0,0.0,0.0
+589,,,,0.0,0.0,0.0,0.0,0.0,0.0
+590,,,,0.0,0.0,0.0,0.0,0.0,0.0
+591,,,,0.0,0.0,0.0,0.0,0.0,0.0
+592,,,,0.0,0.0,0.0,0.0,0.0,0.0
+593,,,,0.0,0.0,0.0,0.0,0.0,0.0
+594,,,,0.0,0.0,0.0,0.0,0.0,0.0
+595,,,,0.0,0.0,0.0,0.0,0.0,0.0
+596,,,,0.0,0.0,0.0,0.0,0.0,0.0
+597,,,,0.0,0.0,0.0,0.0,0.0,0.0
+598,,,,0.0,0.0,0.0,0.0,0.0,0.0
+599,,,,0.0,0.0,0.0,0.0,0.0,0.0
+600,,,,0.0,0.0,0.0,0.0,0.0,0.0
+601,,,,0.0,0.0,0.0,0.0,0.0,0.0
+602,,,,0.0,0.0,0.0,0.0,0.0,0.0
+603,,,,0.0,0.0,0.0,0.0,0.0,0.0
+604,,,,0.0,0.0,0.0,0.0,0.0,0.0
+605,,,,0.0,0.0,0.0,0.0,0.0,0.0
+606,,,,0.0,0.0,0.0,0.0,0.0,0.0
+607,,,,0.0,0.0,0.0,0.0,0.0,0.0
+608,,,,0.0,0.0,0.0,0.0,0.0,0.0
+609,,,,0.0,0.0,0.0,0.0,0.0,0.0
+610,,,,0.0,0.0,0.0,0.0,0.0,0.0
+611,,,,0.0,0.0,0.0,0.0,0.0,0.0
+612,,,,0.0,0.0,0.0,0.0,0.0,0.0
+613,,,,0.0,0.0,0.0,0.0,0.0,0.0
+614,,,,0.0,0.0,0.0,0.0,0.0,0.0
+615,,,,0.0,0.0,0.0,0.0,0.0,0.0
+616,,,,0.0,0.0,0.0,0.0,0.0,0.0
+617,,,,0.0,0.0,0.0,0.0,0.0,0.0
+618,,,,0.0,0.0,0.0,0.0,0.0,0.0
+619,,,,0.0,0.0,0.0,0.0,0.0,0.0
+620,,,,0.0,0.0,0.0,0.0,0.0,0.0
+621,,,,0.0,0.0,0.0,0.0,0.0,0.0
+622,,,,0.0,0.0,0.0,0.0,0.0,0.0
+623,,,,0.0,0.0,0.0,0.0,0.0,0.0
+624,,,,0.0,0.0,0.0,0.0,0.0,0.0
+625,,,,0.0,0.0,0.0,0.0,0.0,0.0
+626,,,,0.0,0.0,0.0,0.0,0.0,0.0
+627,,,,0.0,0.0,0.0,0.0,0.0,0.0
+628,,,,0.0,0.0,0.0,0.0,0.0,0.0
+629,,,,0.0,0.0,0.0,0.0,0.0,0.0
+630,,,,0.0,0.0,0.0,0.0,0.0,0.0
+631,,,,0.0,0.0,0.0,0.0,0.0,0.0
+632,,,,0.0,0.0,0.0,0.0,0.0,0.0
+633,,,,0.0,0.0,0.0,0.0,0.0,0.0
+634,,,,0.0,0.0,0.0,0.0,0.0,0.0
+635,,,,0.0,0.0,0.0,0.0,0.0,0.0
+636,,,,0.0,0.0,0.0,0.0,0.0,0.0
+637,,,,0.0,0.0,0.0,0.0,0.0,0.0
+638,,,,0.0,0.0,0.0,0.0,0.0,0.0
+639,,,,0.0,0.0,0.0,0.0,0.0,0.0
+640,,,,0.0,0.0,0.0,0.0,0.0,0.0
+641,,,,0.0,0.0,0.0,0.0,0.0,0.0
+642,,,,0.0,0.0,0.0,0.0,0.0,0.0
+643,,,,0.0,0.0,0.0,0.0,0.0,0.0
+644,,,,0.0,0.0,0.0,0.0,0.0,0.0
+645,,,,0.0,0.0,0.0,0.0,0.0,0.0
+646,,,,0.0,0.0,0.0,0.0,0.0,0.0
+647,,,,0.0,0.0,0.0,0.0,0.0,0.0
+648,,,,0.0,0.0,0.0,0.0,0.0,0.0
+649,,,,0.0,0.0,0.0,0.0,0.0,0.0
+650,,,,0.0,0.0,0.0,0.0,0.0,0.0
+651,,,,0.0,0.0,0.0,0.0,0.0,0.0
+652,,,,0.0,0.0,0.0,0.0,0.0,0.0
+653,,,,0.0,0.0,0.0,0.0,0.0,0.0
+654,,,,0.0,0.0,0.0,0.0,0.0,0.0
+655,,,,0.0,0.0,0.0,0.0,0.0,0.0
+656,,,,0.0,0.0,0.0,0.0,0.0,0.0
+657,,,,0.0,0.0,0.0,0.0,0.0,0.0
+658,,,,0.0,0.0,0.0,0.0,0.0,0.0
+659,,,,0.0,0.0,0.0,0.0,0.0,0.0
+660,,,,0.0,0.0,0.0,0.0,0.0,0.0
+661,,,,0.0,0.0,0.0,0.0,0.0,0.0
+662,,,,0.0,0.0,0.0,0.0,0.0,0.0
+663,,,,0.0,0.0,0.0,0.0,0.0,0.0
+664,,,,0.0,0.0,0.0,0.0,0.0,0.0
+665,,,,0.0,0.0,0.0,0.0,0.0,0.0
+666,,,,0.0,0.0,0.0,0.0,0.0,0.0
+667,,,,0.0,0.0,0.0,0.0,0.0,0.0
+668,,,,0.0,0.0,0.0,0.0,0.0,0.0
+669,,,,0.0,0.0,0.0,0.0,0.0,0.0
+670,,,,0.0,0.0,0.0,0.0,0.0,0.0
+671,,,,0.0,0.0,0.0,0.0,0.0,0.0
+672,,,,0.0,0.0,0.0,0.0,0.0,0.0
+673,,,,0.0,0.0,0.0,0.0,0.0,0.0
+674,,,,0.0,0.0,0.0,0.0,0.0,0.0
+675,,,,0.0,0.0,0.0,0.0,0.0,0.0
+676,,,,0.0,0.0,0.0,0.0,0.0,0.0
+677,,,,0.0,0.0,0.0,0.0,0.0,0.0
+678,,,,0.0,0.0,0.0,0.0,0.0,0.0
+679,,,,0.0,0.0,0.0,0.0,0.0,0.0
+680,,,,0.0,0.0,0.0,0.0,0.0,0.0
+681,,,,0.0,0.0,0.0,0.0,0.0,0.0
+682,,,,0.0,0.0,0.0,0.0,0.0,0.0
+683,,,,0.0,0.0,0.0,0.0,0.0,0.0
+684,,,,0.0,0.0,0.0,0.0,0.0,0.0
+685,,,,0.0,0.0,0.0,0.0,0.0,0.0
+686,,,,0.0,0.0,0.0,0.0,0.0,0.0
+687,,,,0.0,0.0,0.0,0.0,0.0,0.0
+688,,,,0.0,0.0,0.0,0.0,0.0,0.0
+689,,,,0.0,0.0,0.0,0.0,0.0,0.0
+690,,,,0.0,0.0,0.0,0.0,0.0,0.0
+691,,,,0.0,0.0,0.0,0.0,0.0,0.0
+692,,,,0.0,0.0,0.0,0.0,0.0,0.0
+693,,,,0.0,0.0,0.0,0.0,0.0,0.0
+694,,,,0.0,0.0,0.0,0.0,0.0,0.0
+695,,,,0.0,0.0,0.0,0.0,0.0,0.0
+696,,,,0.0,0.0,0.0,0.0,0.0,0.0
+697,,,,0.0,0.0,0.0,0.0,0.0,0.0
+698,,,,0.0,0.0,0.0,0.0,0.0,0.0
+699,,,,0.0,0.0,0.0,0.0,0.0,0.0
+700,,,,0.0,0.0,0.0,0.0,0.0,0.0
+701,,,,0.0,0.0,0.0,0.0,0.0,0.0
+702,,,,0.0,0.0,0.0,0.0,0.0,0.0
+703,,,,0.0,0.0,0.0,0.0,0.0,0.0
+704,,,,0.0,0.0,0.0,0.0,0.0,0.0
+705,,,,0.0,0.0,0.0,0.0,0.0,0.0
+706,,,,0.0,0.0,0.0,0.0,0.0,0.0
+707,,,,0.0,0.0,0.0,0.0,0.0,0.0
+708,,,,0.0,0.0,0.0,0.0,0.0,0.0
+709,,,,0.0,0.0,0.0,0.0,0.0,0.0
+710,,,,0.0,0.0,0.0,0.0,0.0,0.0
+711,,,,0.0,0.0,0.0,0.0,0.0,0.0
+712,,,,0.0,0.0,0.0,0.0,0.0,0.0
+713,,,,0.0,0.0,0.0,0.0,0.0,0.0
+714,,,,0.0,0.0,0.0,0.0,0.0,0.0
+715,,,,0.0,0.0,0.0,0.0,0.0,0.0
+716,,,,0.0,0.0,0.0,0.0,0.0,0.0
+717,,,,0.0,0.0,0.0,0.0,0.0,0.0
+718,,,,0.0,0.0,0.0,0.0,0.0,0.0
+719,,,,0.0,0.0,0.0,0.0,0.0,0.0
+720,,,,0.0,0.0,0.0,0.0,0.0,0.0
+721,,,,0.0,0.0,0.0,0.0,0.0,0.0
+722,,,,0.0,0.0,0.0,0.0,0.0,0.0
+723,,,,0.0,0.0,0.0,0.0,0.0,0.0
+724,,,,0.0,0.0,0.0,0.0,0.0,0.0
+725,,,,0.0,0.0,0.0,0.0,0.0,0.0
+726,,,,0.0,0.0,0.0,0.0,0.0,0.0
+727,,,,0.0,0.0,0.0,0.0,0.0,0.0
+728,,,,0.0,0.0,0.0,0.0,0.0,0.0
+729,,,,0.0,0.0,0.0,0.0,0.0,0.0
+730,,,,0.0,0.0,0.0,0.0,0.0,0.0
+731,,,,0.0,0.0,0.0,0.0,0.0,0.0
+732,,,,0.0,0.0,0.0,0.0,0.0,0.0
+733,,,,0.0,0.0,0.0,0.0,0.0,0.0
+734,,,,0.0,0.0,0.0,0.0,0.0,0.0
+735,,,,0.0,0.0,0.0,0.0,0.0,0.0
+736,,,,0.0,0.0,0.0,0.0,0.0,0.0
+737,,,,0.0,0.0,0.0,0.0,0.0,0.0
+738,,,,0.0,0.0,0.0,0.0,0.0,0.0
+739,,,,0.0,0.0,0.0,0.0,0.0,0.0
+740,,,,0.0,0.0,0.0,0.0,0.0,0.0
+741,,,,0.0,0.0,0.0,0.0,0.0,0.0
+742,,,,0.0,0.0,0.0,0.0,0.0,0.0
+743,,,,0.0,0.0,0.0,0.0,0.0,0.0
+744,,,,0.0,0.0,0.0,0.0,0.0,0.0
+745,,,,0.0,0.0,0.0,0.0,0.0,0.0
+746,,,,0.0,0.0,0.0,0.0,0.0,0.0
+747,,,,0.0,0.0,0.0,0.0,0.0,0.0
+748,,,,0.0,0.0,0.0,0.0,0.0,0.0
+749,,,,0.0,0.0,0.0,0.0,0.0,0.0
+750,,,,0.0,0.0,0.0,0.0,0.0,0.0
+751,,,,0.0,0.0,0.0,0.0,0.0,0.0
+752,,,,0.0,0.0,0.0,0.0,0.0,0.0
+753,,,,0.0,0.0,0.0,0.0,0.0,0.0
+754,,,,0.0,0.0,0.0,0.0,0.0,0.0
+755,,,,0.0,0.0,0.0,0.0,0.0,0.0
+756,,,,0.0,0.0,0.0,0.0,0.0,0.0
+757,,,,0.0,0.0,0.0,0.0,0.0,0.0
+758,,,,0.0,0.0,0.0,0.0,0.0,0.0
+759,,,,0.0,0.0,0.0,0.0,0.0,0.0
+760,,,,0.0,0.0,0.0,0.0,0.0,0.0
+761,,,,0.0,0.0,0.0,0.0,0.0,0.0
+762,,,,0.0,0.0,0.0,0.0,0.0,0.0
+763,,,,0.0,0.0,0.0,0.0,0.0,0.0
+764,,,,0.0,0.0,0.0,0.0,0.0,0.0
+765,,,,0.0,0.0,0.0,0.0,0.0,0.0
+766,,,,0.0,0.0,0.0,0.0,0.0,0.0
+767,,,,0.0,0.0,0.0,0.0,0.0,0.0
+768,,,,0.0,0.0,0.0,0.0,0.0,0.0
+769,,,,0.0,0.0,0.0,0.0,0.0,0.0
+770,,,,0.0,0.0,0.0,0.0,0.0,0.0
+771,,,,0.0,0.0,0.0,0.0,0.0,0.0
+772,,,,0.0,0.0,0.0,0.0,0.0,0.0
+773,,,,0.0,0.0,0.0,0.0,0.0,0.0
+774,,,,0.0,0.0,0.0,0.0,0.0,0.0
+775,,,,0.0,0.0,0.0,0.0,0.0,0.0
+776,,,,0.0,0.0,0.0,0.0,0.0,0.0
+777,,,,0.0,0.0,0.0,0.0,0.0,0.0
+778,,,,0.0,0.0,0.0,0.0,0.0,0.0
+779,,,,0.0,0.0,0.0,0.0,0.0,0.0
+780,,,,0.0,0.0,0.0,0.0,0.0,0.0
+781,,,,0.0,0.0,0.0,0.0,0.0,0.0
+782,,,,0.0,0.0,0.0,0.0,0.0,0.0
+783,,,,0.0,0.0,0.0,0.0,0.0,0.0
+784,,,,0.0,0.0,0.0,0.0,0.0,0.0
+785,,,,0.0,0.0,0.0,0.0,0.0,0.0
+786,,,,0.0,0.0,0.0,0.0,0.0,0.0
+787,,,,0.0,0.0,0.0,0.0,0.0,0.0
+788,,,,0.0,0.0,0.0,0.0,0.0,0.0
+789,,,,0.0,0.0,0.0,0.0,0.0,0.0
+790,,,,0.0,0.0,0.0,0.0,0.0,0.0
+791,,,,0.0,0.0,0.0,0.0,0.0,0.0
+792,,,,0.0,0.0,0.0,0.0,0.0,0.0
+793,,,,0.0,0.0,0.0,0.0,0.0,0.0
+794,,,,0.0,0.0,0.0,0.0,0.0,0.0
+795,,,,0.0,0.0,0.0,0.0,0.0,0.0
+796,,,,0.0,0.0,0.0,0.0,0.0,0.0
+797,,,,0.0,0.0,0.0,0.0,0.0,0.0
+798,,,,0.0,0.0,0.0,0.0,0.0,0.0
+799,,,,0.0,0.0,0.0,0.0,0.0,0.0
+800,,,,0.0,0.0,0.0,0.0,0.0,0.0
+801,,,,0.0,0.0,0.0,0.0,0.0,0.0
+802,,,,0.0,0.0,0.0,0.0,0.0,0.0
+803,,,,0.0,0.0,0.0,0.0,0.0,0.0
+804,,,,0.0,0.0,0.0,0.0,0.0,0.0
+805,,,,0.0,0.0,0.0,0.0,0.0,0.0
+806,,,,0.0,0.0,0.0,0.0,0.0,0.0
+807,,,,0.0,0.0,0.0,0.0,0.0,0.0
+808,,,,0.0,0.0,0.0,0.0,0.0,0.0
+809,,,,0.0,0.0,0.0,0.0,0.0,0.0
+810,,,,0.0,0.0,0.0,0.0,0.0,0.0
+811,,,,0.0,0.0,0.0,0.0,0.0,0.0
+812,,,,0.0,0.0,0.0,0.0,0.0,0.0
+813,,,,0.0,0.0,0.0,0.0,0.0,0.0
+814,,,,0.0,0.0,0.0,0.0,0.0,0.0
+815,,,,0.0,0.0,0.0,0.0,0.0,0.0
+816,,,,0.0,0.0,0.0,0.0,0.0,0.0
+817,,,,0.0,0.0,0.0,0.0,0.0,0.0
+818,,,,0.0,0.0,0.0,0.0,0.0,0.0
+819,,,,0.0,0.0,0.0,0.0,0.0,0.0
+820,,,,0.0,0.0,0.0,0.0,0.0,0.0
+821,,,,0.0,0.0,0.0,0.0,0.0,0.0
+822,,,,0.0,0.0,0.0,0.0,0.0,0.0
+823,,,,0.0,0.0,0.0,0.0,0.0,0.0
+824,,,,0.0,0.0,0.0,0.0,0.0,0.0
+825,,,,0.0,0.0,0.0,0.0,0.0,0.0
+826,,,,0.0,0.0,0.0,0.0,0.0,0.0
+827,,,,0.0,0.0,0.0,0.0,0.0,0.0
+828,,,,0.0,0.0,0.0,0.0,0.0,0.0
+829,,,,0.0,0.0,0.0,0.0,0.0,0.0
+830,,,,0.0,0.0,0.0,0.0,0.0,0.0
+831,,,,0.0,0.0,0.0,0.0,0.0,0.0
+832,,,,0.0,0.0,0.0,0.0,0.0,0.0
+833,,,,0.0,0.0,0.0,0.0,0.0,0.0
+834,,,,0.0,0.0,0.0,0.0,0.0,0.0
+835,,,,0.0,0.0,0.0,0.0,0.0,0.0
+836,,,,0.0,0.0,0.0,0.0,0.0,0.0
+837,,,,0.0,0.0,0.0,0.0,0.0,0.0
+838,,,,0.0,0.0,0.0,0.0,0.0,0.0
+839,,,,0.0,0.0,0.0,0.0,0.0,0.0
+840,,,,0.0,0.0,0.0,0.0,0.0,0.0
+841,,,,0.0,0.0,0.0,0.0,0.0,0.0
+842,,,,0.0,0.0,0.0,0.0,0.0,0.0
+843,,,,0.0,0.0,0.0,0.0,0.0,0.0
+844,,,,0.0,0.0,0.0,0.0,0.0,0.0
+845,,,,0.0,0.0,0.0,0.0,0.0,0.0
+846,,,,0.0,0.0,0.0,0.0,0.0,0.0
+847,,,,0.0,0.0,0.0,0.0,0.0,0.0
+848,,,,0.0,0.0,0.0,0.0,0.0,0.0
+849,,,,0.0,0.0,0.0,0.0,0.0,0.0
+850,,,,0.0,0.0,0.0,0.0,0.0,0.0
+851,,,,0.0,0.0,0.0,0.0,0.0,0.0
+852,,,,0.0,0.0,0.0,0.0,0.0,0.0
+853,,,,0.0,0.0,0.0,0.0,0.0,0.0
+854,,,,0.0,0.0,0.0,0.0,0.0,0.0
+855,,,,0.0,0.0,0.0,0.0,0.0,0.0
+856,,,,0.0,0.0,0.0,0.0,0.0,0.0
+857,,,,0.0,0.0,0.0,0.0,0.0,0.0
+858,,,,0.0,0.0,0.0,0.0,0.0,0.0
+859,,,,0.0,0.0,0.0,0.0,0.0,0.0
+860,,,,0.0,0.0,0.0,0.0,0.0,0.0
+861,,,,0.0,0.0,0.0,0.0,0.0,0.0
+862,,,,0.0,0.0,0.0,0.0,0.0,0.0
+863,,,,0.0,0.0,0.0,0.0,0.0,0.0
+864,,,,0.0,0.0,0.0,0.0,0.0,0.0
+865,,,,0.0,0.0,0.0,0.0,0.0,0.0
+866,,,,0.0,0.0,0.0,0.0,0.0,0.0
+867,,,,0.0,0.0,0.0,0.0,0.0,0.0
+868,,,,0.0,0.0,0.0,0.0,0.0,0.0
+869,,,,0.0,0.0,0.0,0.0,0.0,0.0
+870,,,,0.0,0.0,0.0,0.0,0.0,0.0
+871,,,,0.0,0.0,0.0,0.0,0.0,0.0
+872,,,,0.0,0.0,0.0,0.0,0.0,0.0
+873,,,,0.0,0.0,0.0,0.0,0.0,0.0
+874,,,,0.0,0.0,0.0,0.0,0.0,0.0
+875,,,,0.0,0.0,0.0,0.0,0.0,0.0
+876,,,,0.0,0.0,0.0,0.0,0.0,0.0
+877,,,,0.0,0.0,0.0,0.0,0.0,0.0
+878,,,,0.0,0.0,0.0,0.0,0.0,0.0
+879,,,,0.0,0.0,0.0,0.0,0.0,0.0
+880,,,,0.0,0.0,0.0,0.0,0.0,0.0
+881,,,,0.0,0.0,0.0,0.0,0.0,0.0
+882,,,,0.0,0.0,0.0,0.0,0.0,0.0
+883,,,,0.0,0.0,0.0,0.0,0.0,0.0
+884,,,,0.0,0.0,0.0,0.0,0.0,0.0
+885,,,,0.0,0.0,0.0,0.0,0.0,0.0
+886,,,,0.0,0.0,0.0,0.0,0.0,0.0
+887,,,,0.0,0.0,0.0,0.0,0.0,0.0
+888,,,,0.0,0.0,0.0,0.0,0.0,0.0
+889,,,,0.0,0.0,0.0,0.0,0.0,0.0
+890,,,,0.0,0.0,0.0,0.0,0.0,0.0
+891,,,,0.0,0.0,0.0,0.0,0.0,0.0
+892,,,,0.0,0.0,0.0,0.0,0.0,0.0
+893,,,,0.0,0.0,0.0,0.0,0.0,0.0
+894,,,,0.0,0.0,0.0,0.0,0.0,0.0
+895,,,,0.0,0.0,0.0,0.0,0.0,0.0
+896,,,,0.0,0.0,0.0,0.0,0.0,0.0
+897,,,,0.0,0.0,0.0,0.0,0.0,0.0
+898,,,,0.0,0.0,0.0,0.0,0.0,0.0
+899,,,,0.0,0.0,0.0,0.0,0.0,0.0
+900,,,,0.0,0.0,0.0,0.0,0.0,0.0
+901,,,,0.0,0.0,0.0,0.0,0.0,0.0
+902,,,,0.0,0.0,0.0,0.0,0.0,0.0
+903,,,,0.0,0.0,0.0,0.0,0.0,0.0
+904,,,,0.0,0.0,0.0,0.0,0.0,0.0
+905,,,,0.0,0.0,0.0,0.0,0.0,0.0
+906,,,,0.0,0.0,0.0,0.0,0.0,0.0
+907,,,,0.0,0.0,0.0,0.0,0.0,0.0
+908,,,,0.0,0.0,0.0,0.0,0.0,0.0
+909,,,,0.0,0.0,0.0,0.0,0.0,0.0
+910,,,,0.0,0.0,0.0,0.0,0.0,0.0
+911,,,,0.0,0.0,0.0,0.0,0.0,0.0
+912,,,,0.0,0.0,0.0,0.0,0.0,0.0
+913,,,,0.0,0.0,0.0,0.0,0.0,0.0
+914,,,,0.0,0.0,0.0,0.0,0.0,0.0
+915,,,,0.0,0.0,0.0,0.0,0.0,0.0
+916,,,,0.0,0.0,0.0,0.0,0.0,0.0
+917,,,,0.0,0.0,0.0,0.0,0.0,0.0
+918,,,,0.0,0.0,0.0,0.0,0.0,0.0
+919,,,,0.0,0.0,0.0,0.0,0.0,0.0
+920,,,,0.0,0.0,0.0,0.0,0.0,0.0
+921,,,,0.0,0.0,0.0,0.0,0.0,0.0
+922,,,,0.0,0.0,0.0,0.0,0.0,0.0
+923,,,,0.0,0.0,0.0,0.0,0.0,0.0
+924,,,,0.0,0.0,0.0,0.0,0.0,0.0
+925,,,,0.0,0.0,0.0,0.0,0.0,0.0
+926,,,,0.0,0.0,0.0,0.0,0.0,0.0
+927,,,,0.0,0.0,0.0,0.0,0.0,0.0
+928,,,,0.0,0.0,0.0,0.0,0.0,0.0
+929,,,,0.0,0.0,0.0,0.0,0.0,0.0
+930,,,,0.0,0.0,0.0,0.0,0.0,0.0
+931,,,,0.0,0.0,0.0,0.0,0.0,0.0
+932,,,,0.0,0.0,0.0,0.0,0.0,0.0
+933,,,,0.0,0.0,0.0,0.0,0.0,0.0
+934,,,,0.0,0.0,0.0,0.0,0.0,0.0
+935,,,,0.0,0.0,0.0,0.0,0.0,0.0
+936,,,,0.0,0.0,0.0,0.0,0.0,0.0
+937,,,,0.0,0.0,0.0,0.0,0.0,0.0
+938,,,,0.0,0.0,0.0,0.0,0.0,0.0
+939,,,,0.0,0.0,0.0,0.0,0.0,0.0
+940,,,,0.0,0.0,0.0,0.0,0.0,0.0
+941,,,,0.0,0.0,0.0,0.0,0.0,0.0
+942,,,,0.0,0.0,0.0,0.0,0.0,0.0
+943,,,,0.0,0.0,0.0,0.0,0.0,0.0
+944,,,,0.0,0.0,0.0,0.0,0.0,0.0
+945,,,,0.0,0.0,0.0,0.0,0.0,0.0
+946,,,,0.0,0.0,0.0,0.0,0.0,0.0
+947,,,,0.0,0.0,0.0,0.0,0.0,0.0
+948,,,,0.0,0.0,0.0,0.0,0.0,0.0
+949,,,,0.0,0.0,0.0,0.0,0.0,0.0
+950,,,,0.0,0.0,0.0,0.0,0.0,0.0
+951,,,,0.0,0.0,0.0,0.0,0.0,0.0
+952,,,,0.0,0.0,0.0,0.0,0.0,0.0
+953,,,,0.0,0.0,0.0,0.0,0.0,0.0
+954,,,,0.0,0.0,0.0,0.0,0.0,0.0
+955,,,,0.0,0.0,0.0,0.0,0.0,0.0
+956,,,,0.0,0.0,0.0,0.0,0.0,0.0
+957,,,,0.0,0.0,0.0,0.0,0.0,0.0
+958,,,,0.0,0.0,0.0,0.0,0.0,0.0
+959,,,,0.0,0.0,0.0,0.0,0.0,0.0
+960,,,,0.0,0.0,0.0,0.0,0.0,0.0
+961,,,,0.0,0.0,0.0,0.0,0.0,0.0
+962,,,,0.0,0.0,0.0,0.0,0.0,0.0
+963,,,,0.0,0.0,0.0,0.0,0.0,0.0
+964,,,,0.0,0.0,0.0,0.0,0.0,0.0
+965,,,,0.0,0.0,0.0,0.0,0.0,0.0
+966,,,,0.0,0.0,0.0,0.0,0.0,0.0
+967,,,,0.0,0.0,0.0,0.0,0.0,0.0
+968,,,,0.0,0.0,0.0,0.0,0.0,0.0
+969,,,,0.0,0.0,0.0,0.0,0.0,0.0
+970,,,,0.0,0.0,0.0,0.0,0.0,0.0
+971,,,,0.0,0.0,0.0,0.0,0.0,0.0
+972,,,,0.0,0.0,0.0,0.0,0.0,0.0
+973,,,,0.0,0.0,0.0,0.0,0.0,0.0
+974,,,,0.0,0.0,0.0,0.0,0.0,0.0
+975,,,,0.0,0.0,0.0,0.0,0.0,0.0
+976,,,,0.0,0.0,0.0,0.0,0.0,0.0
+977,,,,0.0,0.0,0.0,0.0,0.0,0.0
+978,,,,0.0,0.0,0.0,0.0,0.0,0.0
+979,,,,0.0,0.0,0.0,0.0,0.0,0.0
+980,,,,0.0,0.0,0.0,0.0,0.0,0.0
+981,,,,0.0,0.0,0.0,0.0,0.0,0.0
+982,,,,0.0,0.0,0.0,0.0,0.0,0.0
+983,,,,0.0,0.0,0.0,0.0,0.0,0.0
+984,,,,0.0,0.0,0.0,0.0,0.0,0.0
+985,,,,0.0,0.0,0.0,0.0,0.0,0.0
+986,,,,0.0,0.0,0.0,0.0,0.0,0.0
+987,,,,0.0,0.0,0.0,0.0,0.0,0.0
+988,,,,0.0,0.0,0.0,0.0,0.0,0.0
+989,,,,0.0,0.0,0.0,0.0,0.0,0.0
+990,,,,0.0,0.0,0.0,0.0,0.0,0.0
+991,,,,0.0,0.0,0.0,0.0,0.0,0.0
+992,,,,0.0,0.0,0.0,0.0,0.0,0.0
